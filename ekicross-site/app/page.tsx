@@ -7,12 +7,12 @@ type Lang = 'th' | 'en';
 
 const firmwareDownloads = {
   stable: {
-    url: 'https://github.com/papaaiclass/ekicross-x3-firmware/releases/download/v4.0.1/Ekicross-X3-4.0.1-Stable.bin',
+    url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.0.1/Ekicross-X3-4.0.1-Stable.bin',
     size: '6.21 MB',
     sha256: '2e63729e89467f0aa0a2ff5186af59441e990de437d118eff0769087cdfdcfbd',
   },
   update: {
-    url: 'https://github.com/papaaiclass/ekicross-x3-firmware/releases/download/v4.1.0/Ekicross-X3-4.1.0-Update.bin',
+    url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.1.0/Ekicross-X3-4.1.0-Update.bin',
     size: '6.22 MB',
     sha256: '5fadc0dce602c5c9634a90d7e0a1a80dc42cdbca3fd815e13ce02232610431a0',
   },
