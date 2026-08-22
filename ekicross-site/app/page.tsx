@@ -12,9 +12,9 @@ const firmwareDownloads = {
     sha256: '2e63729e89467f0aa0a2ff5186af59441e990de437d118eff0769087cdfdcfbd',
   },
   update: {
-    url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.1.0/Ekicross-X3-4.1.0-Update.bin',
+    url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.1.1/Ekicross-X3-4.1.1-Update.bin',
     size: '6.22 MB',
-    sha256: '5fadc0dce602c5c9634a90d7e0a1a80dc42cdbca3fd815e13ce02232610431a0',
+    sha256: '57eef634a0a18f8e635db3d98db141316115b5fcd54b9ba7381288a14d76dbd6',
   },
 };
 
@@ -41,7 +41,7 @@ const copy = {
     developmentIntro: 'ความพิถีพิถันซ่อนอยู่ในรายละเอียดที่อาจไม่สะดุดตาในทันที แต่ผู้อ่านต้องมองเห็นและสัมผัสตลอดทั้งเล่ม จึงทดสอบตั้งแต่การตัดคำ การจัดย่อหน้า ตำแหน่งสระและวรรณยุกต์ ช่องไฟ เส้นขอบ ความสมมาตรของอินเทอร์เฟซ ปกหนังสือหลายรูปแบบ ไปจนถึงจังหวะการกดปุ่มซ้ำแล้วซ้ำอีกจนลงตัว',
     releaseLabel: 'รุ่นเฟิร์มแวร์',
     releaseTitle: 'รุ่นปัจจุบันและสถานะการเผยแพร่',
-    releaseBody: 'Ekicross มีให้เลือกสองรุ่นสำหรับ XTEINK X3 ได้แก่ 4.0.1 Stable สำหรับผู้ที่ต้องการความเสถียร และ 4.1.0 Update ซึ่งเพิ่มแกลเลอรี ปฏิทิน สถิติการอ่าน โหมดมืด และการปรับปรุงหน้าหนังสือรุ่นล่าสุด',
+    releaseBody: 'Ekicross มีให้เลือกสองรุ่นสำหรับ XTEINK X3 ได้แก่ 4.0.1 Stable สำหรับผู้ที่ต้องการความเสถียร และ 4.1.1 Update ซึ่งปรับการจัดข้อความเต็มบรรทัดให้เหมาะกับภาษาไทย รักษาตัวเอียงจากต้นฉบับ และตรวจทานถ้อยคำภาษาไทยทั้งระบบ',
     target: 'รองรับเฉพาะ',
     download: 'ดาวน์โหลดเฟิร์มแวร์',
     fileSize: 'ไฟล์ .bin',
@@ -75,7 +75,7 @@ const copy = {
     developmentIntro: 'The care lives in details that may go unnoticed at first but remain visible throughout a book. Thai text, long titles, varied covers, and button flows are tested repeatedly until they settle naturally.',
     releaseLabel: 'FIRMWARE RELEASE',
     releaseTitle: 'Current release and availability',
-    releaseBody: 'Ekicross is distributed in two XTEINK X3 releases: 4.0.1 Stable for a settled experience and 4.1.0 Update with the latest Gallery, calendar, reading statistics, Dark mode, and Reader improvements.',
+    releaseBody: 'Ekicross is distributed in two XTEINK X3 releases: 4.0.1 Stable for a settled experience and 4.1.1 Update with adaptive Thai justification, preserved source italics, and revised Thai interface text.',
     target: 'Target device',
     download: 'Download firmware',
     fileSize: '.bin file',
