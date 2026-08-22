@@ -1,8 +1,8 @@
-name: Deploy to GitHub Pages
+name: Deploy Ekicross to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -11,8 +11,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
@@ -20,31 +20,32 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ekicross-site
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+      - name: Enable pnpm
+        run: corepack enable
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
+          cache: pnpm
+          cache-dependency-path: ekicross-site/pnpm-lock.yaml
       - name: Install dependencies
-        working-directory: ./ekicross-site
-        run: npm install
-
-      - name: Build static site
-        working-directory: ./ekicross-site
-        run: npm run build
-
-      - name: Upload artifact
+        run: pnpm install --frozen-lockfile
+      - name: Remove obsolete duplicate config
+        run: rm -f next.config.js
+      - name: Build static website
+        run: pnpm run build:pages
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./ekicross-site/out
-
-      - name: Deploy to GitHub Pages
+          path: ekicross-site/out
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
