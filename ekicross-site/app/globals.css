@@ -101,10 +101,10 @@ main { position: relative; min-height: 100vh; overflow: hidden; }
 .download-panel>span { color: #8a93a6; font: 650 10px/1 var(--font-geist-mono), monospace; letter-spacing: .1em; }
 .download-panel button { width: 100%; border: 0; border-radius: 15px; padding: 16px; color: #8790a2; background: rgba(232,237,247,.86); font-size: 13px; }
 .download-panel p { margin: 13px 2px 0; color: #7a8499; font-size: 12px; line-height: 1.7; }
-.warning { margin-top: 16px; border-radius: 22px; padding: 22px 26px; display: grid; grid-template-columns: 42px 1fr; gap: 14px; align-items: start; }
-.warning>span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; color: #b56d00; background: rgba(255,177,45,.16); font-weight: 800; }
-.warning h3 { margin: 0 0 5px; font-size: 14px; }
-.warning p { margin: 0; color: #687287; font-size: 13px; line-height: 1.75; }
+.warning { margin-top: 18px; border-radius: 24px; padding: 26px 30px; display: grid; grid-template-columns: 48px 1fr; gap: 17px; align-items: start; border: 1px solid rgba(191,115,0,.22); box-shadow: 0 18px 45px rgba(116,73,16,.13); }
+.warning>span { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: #7b4200; background: rgba(255,174,35,.32); border: 1px solid rgba(181,103,0,.2); font-size: 19px; font-weight: 900; }
+.warning h3 { margin: 0 0 7px; color: #332715; font-size: 18px; font-weight: 850; letter-spacing: -.02em; }
+.warning p { margin: 0; color: #423a2f; font-size: 15px; font-weight: 650; line-height: 1.8; }
 
 footer { position: relative; width: min(1180px, calc(100% - 28px)); margin: 70px auto 14px; border-radius: 30px; }
 .footer-inner { width: auto; padding: 38px; display: grid; grid-template-columns: 1fr 1fr auto; gap: 45px; align-items: start; }
@@ -248,12 +248,13 @@ main::before {
 .release-panel { background: linear-gradient(135deg, rgba(255,255,255,.7), rgba(232,223,255,.46)); }
 .download-panel { background: linear-gradient(145deg, rgba(255,255,255,.68), rgba(213,242,255,.45)); }
 .download-panel button { color: #827d91; background: linear-gradient(120deg, rgba(230,222,255,.78), rgba(211,240,255,.8)); }
-.warning { background: linear-gradient(135deg, rgba(255,255,255,.68), rgba(255,237,208,.46)); }
+.warning { background: linear-gradient(135deg, rgba(255,252,244,.94), rgba(255,222,166,.72)); }
 .section-kicker span { color: #7868dd; box-shadow: 0 7px 18px rgba(120,104,221,.13); }
 
-.footer-inner { grid-template-columns: 1fr auto; align-items: center; }
-.footer-brand { width: min(430px,100%); display: flex; flex-direction: column; align-items: center; text-align: center; }
+.footer-inner { position: relative; grid-template-columns: 1fr; align-items: center; }
+.footer-brand { width: min(430px,100%); justify-self: center; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .footer-brand span { max-width: 360px; line-height: 1.6; text-wrap: balance; }
+.footer-inner>a { position: absolute; right: 38px; top: 50%; transform: translateY(-50%); }
 
 @media (max-width: 850px) {
   .development-list { grid-template-columns: 1fr; }
@@ -329,6 +330,7 @@ main[lang='th'] button {
 .installation-card-03 { grid-column: 1 / -1; background: linear-gradient(135deg, rgba(255,255,255,.7), rgba(255,233,204,.48)); }
 .installation-card-heading { display: grid; grid-template-columns: 38px 1fr; gap: 12px; align-items: start; margin-bottom: 24px; }
 .installation-card-heading>span { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; color: #7868dd; background: rgba(255,255,255,.67); border: 1px solid rgba(255,255,255,.86); font: 700 10px/1 var(--font-geist-mono), monospace; }
+.installation-card .install-highlight { margin-top: 12px; padding: 13px 15px; border: 1px solid rgba(125,92,225,.18); border-radius: 14px; color: #4d4168; background: linear-gradient(120deg, rgba(237,226,255,.82), rgba(216,243,255,.78)); font-weight: 700; line-height: 1.75; }
 .installation-card h3 { margin: 2px 0 0; font-size: 23px; line-height: 1.45; letter-spacing: -.025em; }
 .installation-card>ol, .installation-card>ul { margin: 0; padding: 0; list-style: none; counter-reset: install-step; display: grid; gap: 18px; }
 .installation-card>ol>li, .installation-card>ul>li { position: relative; display: grid; grid-template-columns: 30px 1fr; gap: 11px; counter-increment: install-step; }

@@ -121,6 +121,7 @@ const installationCards = {
         {
           title: 'เตรียม SD Card',
           body: 'ฟอร์แมตการ์ดเป็น exFAT แล้ววางไฟล์ .bin ไว้ที่หน้าหลักของการ์ดได้ทันที โดยไม่ต้องสร้างโฟลเดอร์',
+          highlight: 'สำคัญ: เปลี่ยนชื่อไฟล์ที่ดาวน์โหลดเป็น firmware.bin ก่อนนำไปใส่ SD Card ชื่อไฟล์จากหน้าดาวน์โหลดอาจยังเป็นชื่อรุ่นและยังไม่พร้อมติดตั้งทันที',
           details: [],
         },
         {
@@ -182,7 +183,7 @@ const installationCards = {
       title: 'Installing Ekicross X3 firmware',
       kind: 'steps',
       items: [
-        { title: 'Prepare the SD card', body: 'Format it as exFAT and place the .bin file at the card root. Do not create a folder.', details: [] },
+        { title: 'Prepare the SD card', body: 'Format it as exFAT and place the .bin file at the card root. Do not create a folder.', highlight: 'Important: Rename the downloaded file to firmware.bin before placing it on the SD card. The downloaded filename may still include the release name and is not ready for installation as-is.', details: [] },
         { title: 'Check the current firmware', body: 'Insert the card and confirm that the device has the SD Card Firmware Update menu.', details: [] },
         { title: 'Check the battery', body: 'Battery level must be at least 60%. Do not connect a charger during installation.', details: [] },
         { title: 'Verify and update', body: 'Open SD Card Firmware Update, wait for file verification to pass, then start the update. Do not power off, remove the card, or operate the device before progress reaches 100%.', details: [] },
@@ -273,7 +274,7 @@ export default function Home() {
             const List = card.kind === 'steps' ? 'ol' : 'ul';
             return <article className={`installation-card installation-card-${card.number} glass`} key={card.number}>
               <div className="installation-card-heading"><span>{card.number}</span><h3>{card.title}</h3></div>
-              <List>{card.items.map(item => <li key={item.title}><div><strong>{item.title}</strong><p>{item.body}</p>{item.details.length > 0 && <ul>{item.details.map(detail => <li key={detail}>{detail}</li>)}</ul>}</div></li>)}</List>
+              <List>{card.items.map(item => <li key={item.title}><div><strong>{item.title}</strong><p>{item.body}</p>{'highlight' in item && <p className="install-highlight">{item.highlight}</p>}{item.details.length > 0 && <ul>{item.details.map(detail => <li key={detail}>{detail}</li>)}</ul>}</div></li>)}</List>
             </article>;
           })}
         </div>
