@@ -312,6 +312,7 @@ main[lang='th'] button {
 .download-button:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(103,88,157,.18); }
 .download-button:focus-visible { outline: 3px solid rgba(105,86,205,.28); outline-offset: 3px; }
 .download-button span { font-size: 17px; }
+.rename-file-note { margin: 12px 2px 0; padding: 10px 12px; border: 1px solid rgba(123,93,215,.2); border-radius: 12px; color: #4e416a; background: rgba(241,234,255,.72); font-size: 12px; font-weight: 750; line-height: 1.65; }
 .status-dot.ready { background: #30b56f; box-shadow: 0 0 0 5px rgba(48,181,111,.12); }
 .download-note { margin: 12px 2px 0; color: #7b8497; font-size: 12px; line-height: 1.7; }
 .checksum { margin-top: 4px; color: #7b8497; font-size: 11px; }
