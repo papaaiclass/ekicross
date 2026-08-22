@@ -5,6 +5,21 @@ import { currentRelease, development, stableRelease } from './firmware-data';
 
 type Lang = 'th' | 'en';
 
+const firmwareDownloads = {
+  stable: {
+    url: 'https://github.com/papaaiclass/ekicross-x3-firmware/releases/download/v4.0.1/Ekicross-X3-4.0.1-Stable.bin',
+    size: '6.21 MB',
+    sha256: '2e63729e89467f0aa0a2ff5186af59441e990de437d118eff0769087cdfdcfbd',
+  },
+  update: {
+    url: 'https://github.com/papaaiclass/ekicross-x3-firmware/releases/download/v4.1.0/Ekicross-X3-4.1.0-Update.bin',
+    size: '6.22 MB',
+    sha256: '5fadc0dce602c5c9634a90d7e0a1a80dc42cdbca3fd815e13ce02232610431a0',
+  },
+};
+
+const assetPath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
+
 const copy = {
   th: {
     nav: ['เรื่องราว', 'สิ่งที่พัฒนา', 'รุ่นเฟิร์มแวร์', 'การติดตั้ง'],
@@ -28,8 +43,9 @@ const copy = {
     releaseTitle: 'รุ่นปัจจุบันและสถานะการเผยแพร่',
     releaseBody: 'Ekicross แจกจ่ายสองรุ่นสำหรับ XTEINK X3: 4.0.1 Stable สำหรับผู้ที่ต้องการรุ่นนิ่ง และ 4.1.0 Update ที่รวม Gallery ปฏิทิน สถิติการอ่าน Dark mode และการปรับ Reader รุ่นล่าสุด',
     target: 'รองรับเฉพาะ',
-    download: 'กำลังเพิ่มลิงก์ดาวน์โหลด',
-    downloadNote: 'สถานะพร้อมดาวน์โหลด เหลือเพียงเพิ่มลิงก์ไฟล์ในหน้านี้',
+    download: 'ดาวน์โหลดเฟิร์มแวร์',
+    fileSize: 'ไฟล์ .bin',
+    checksum: 'รหัสตรวจสอบไฟล์',
     warningTitle: 'ก่อนติดตั้ง',
     warning: 'เฟิร์มแวร์นี้ใช้กับ XTEINK X3 เท่านั้น ไม่ใช่ X4 ก่อนอัปเดตควรสำรองหนังสือและข้อมูลสำคัญ ชาร์จแบตเตอรี่ให้เพียงพอ และอย่าปิดเครื่องหรือถอด SD card ระหว่างติดตั้ง',
     installLabel: 'การติดตั้ง',
@@ -60,8 +76,9 @@ const copy = {
     releaseTitle: 'Current release and availability',
     releaseBody: 'Ekicross is distributed in two XTEINK X3 releases: 4.0.1 Stable for a settled experience and 4.1.0 Update with the latest Gallery, calendar, reading statistics, Dark mode, and Reader improvements.',
     target: 'Target device',
-    download: 'Download link being added',
-    downloadNote: 'The release is open for download; only the file link remains to be added here.',
+    download: 'Download firmware',
+    fileSize: '.bin file',
+    checksum: 'File checksum',
     warningTitle: 'Before installing',
     warning: 'This firmware is only for XTEINK X3, not X4. Back up important books and data, charge the battery, and never power off or remove the SD card during installation.',
     installLabel: 'INSTALLATION',
@@ -192,7 +209,7 @@ export default function Home() {
     <main lang={lang}>
       <div className="ambient ambient-one" /><div className="ambient ambient-two" /><div className="noise" />
       <header className="site-header glass">
-        <a className="parent-brand" href="#top" aria-label="Ekicross"><img src="/ekicross-parent-logo-transparent.png" alt="Ekicross" /></a>
+        <a className="parent-brand" href="#top" aria-label="Ekicross"><img src={assetPath('/ekicross-parent-logo-transparent.png')} alt="Ekicross" /></a>
         <nav aria-label={lang === 'th' ? 'เมนูหลัก' : 'Main navigation'}>{t.nav.map((item, index) => <a key={item} href={['#story', '#development', '#release', '#install'][index]}>{item}</a>)}</nav>
         <div className="language" aria-label="Language"><button className={lang === 'th' ? 'active' : ''} onClick={() => setLang('th')}>TH</button><button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')}>EN</button></div>
       </header>
@@ -204,7 +221,7 @@ export default function Home() {
           <p className="lead">{t.intro}</p>
           <div className="hero-actions"><a className="primary-button" href="#development">{t.readMore}<span>↓</span></a><a className="version-link" href="#release">v{currentRelease.version} <span>→</span></a></div>
         </div>
-        <figure className="release-art device-art"><img src="/ekicross-on-device-cutout.png" alt="Ekicross shown on an XTEINK X3" /></figure>
+        <figure className="release-art device-art"><img src={assetPath('/ekicross-on-device-cutout.png')} alt="Ekicross shown on an XTEINK X3" /></figure>
       </section>
 
       <section className="story wrap" id="story">
@@ -212,11 +229,11 @@ export default function Home() {
         <div className="story-card glass"><h2>{t.storyTitle}</h2><div><p>{t.storyBody1}</p><p>{t.storyBody2}</p></div></div>
       </section>
 
-      <section className="showcase wrap" aria-labelledby="showcase-title"><div className="section-heading"><h2 id="showcase-title">{t.showcaseTitle}</h2><p>{t.showcaseBody}</p></div><figure className="showcase-device"><img src="/ekicross-home-ui-cutout.png" alt="Ekicross Home interface on X3" /></figure></section>
+      <section className="showcase wrap" aria-labelledby="showcase-title"><div className="section-heading"><h2 id="showcase-title">{t.showcaseTitle}</h2><p>{t.showcaseBody}</p></div><figure className="showcase-device"><img src={assetPath('/ekicross-home-ui-cutout.png')} alt="Ekicross Home interface on X3" /></figure></section>
 
       <section className="developer-profile wrap" id="developer" aria-labelledby="developer-title">
         <div className="developer-copy"><div className="section-kicker"><span>•</span>{t.developerLabel}</div><h2 id="developer-title">{t.developerTitle}</h2><p>{t.developerBody}</p></div>
-        <figure><img src="/ekicross-developer-device-cutout.png" alt={t.developerLabel} /></figure>
+        <figure><img src={assetPath('/ekicross-developer-device-cutout.png')} alt={t.developerLabel} /></figure>
       </section>
 
       <section className="development wrap" id="development">
@@ -228,7 +245,22 @@ export default function Home() {
       <section className="release wrap" id="release">
         <div className="section-kicker"><span>03</span>{t.releaseLabel}</div>
         <div className="section-heading"><h2>{t.releaseTitle}</h2><p>{t.releaseBody}</p></div>
-        <div className="release-grid two-releases"><article className="release-panel glass"><div className="release-top"><span className="status-dot ready" />{stableRelease[lang]}</div><h3>Ekicross X3<br />{stableRelease.version}</h3><button disabled>{t.download}</button><p className="download-note">{t.downloadNote}</p></article><article className="release-panel update glass"><div className="release-top"><span className="status-dot ready" />{currentRelease.status[lang]}</div><h3>Ekicross X3<br />{currentRelease.version}</h3><button disabled>{t.download}</button><p className="download-note">{t.downloadNote}</p></article></div>
+        <div className="release-grid two-releases">
+          <article className="release-panel glass">
+            <div className="release-top"><span className="status-dot ready" />{stableRelease[lang]}</div>
+            <h3>Ekicross X3<br />{stableRelease.version}</h3>
+            <a className="download-button" href={firmwareDownloads.stable.url}>{t.download}<span>↓</span></a>
+            <p className="download-note">{t.fileSize} · {firmwareDownloads.stable.size}</p>
+            <details className="checksum"><summary>{t.checksum}</summary><code>{firmwareDownloads.stable.sha256}</code></details>
+          </article>
+          <article className="release-panel update glass">
+            <div className="release-top"><span className="status-dot ready" />{currentRelease.status[lang]}</div>
+            <h3>Ekicross X3<br />{currentRelease.version}</h3>
+            <a className="download-button" href={firmwareDownloads.update.url}>{t.download}<span>↓</span></a>
+            <p className="download-note">{t.fileSize} · {firmwareDownloads.update.size}</p>
+            <details className="checksum"><summary>{t.checksum}</summary><code>{firmwareDownloads.update.sha256}</code></details>
+          </article>
+        </div>
         <div className="test-grid release-tests">{currentRelease.tests.map(test => <div key={test.value}><strong>{test.value}</strong><span>{test[lang]}</span></div>)}</div>
         <aside className="warning glass"><span>!</span><div><h3>{t.warningTitle}</h3><p>{t.warning}</p></div></aside>
       </section>
@@ -247,7 +279,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="glass"><div className="footer-inner wrap"><div className="footer-brand"><img src="/ekicross-parent-logo-transparent.png" alt="Ekicross" /><span>{t.hub}</span></div><a href="#top">{t.back} ↑</a></div><div className="footer-bottom wrap"><span>EKICROSS © 2026</span><span>FOR X3 LAUNCHING</span></div></footer>
+      <footer className="glass"><div className="footer-inner wrap"><div className="footer-brand"><img src={assetPath('/ekicross-parent-logo-transparent.png')} alt="Ekicross" /><span>{t.hub}</span></div><a href="#top">{t.back} ↑</a></div><div className="footer-bottom wrap"><span>EKICROSS © 2026</span><span>FOR X3 LAUNCHING</span></div></footer>
     </main>
   );
 }

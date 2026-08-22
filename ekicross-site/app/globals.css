@@ -307,9 +307,15 @@ main[lang='th'] button {
 .two-releases .release-panel { display: flex; flex-direction: column; }
 .two-releases .release-panel.update { background: linear-gradient(135deg, rgba(255,255,255,.7), rgba(214,239,255,.52)); }
 .two-releases .release-panel h3 { flex: 1; }
-.two-releases .release-panel button { width: 100%; margin-top: 5px; border: 0; border-radius: 15px; padding: 15px; color: #786d91; background: linear-gradient(120deg, rgba(233,222,255,.82), rgba(211,242,255,.84)); }
+.download-button { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; margin-top: 5px; border: 1px solid rgba(255,255,255,.78); border-radius: 15px; padding: 15px; color: #514568; background: linear-gradient(120deg, rgba(233,222,255,.9), rgba(211,242,255,.92)); box-shadow: 0 12px 28px rgba(103,88,157,.12); font-weight: 700; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.download-button:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(103,88,157,.18); }
+.download-button:focus-visible { outline: 3px solid rgba(105,86,205,.28); outline-offset: 3px; }
+.download-button span { font-size: 17px; }
 .status-dot.ready { background: #30b56f; box-shadow: 0 0 0 5px rgba(48,181,111,.12); }
 .download-note { margin: 12px 2px 0; color: #7b8497; font-size: 12px; line-height: 1.7; }
+.checksum { margin-top: 4px; color: #7b8497; font-size: 11px; }
+.checksum summary { width: fit-content; cursor: pointer; }
+.checksum code { display: block; margin-top: 8px; padding: 10px 12px; overflow-wrap: anywhere; border-radius: 11px; color: #596278; background: rgba(255,255,255,.5); font-size: 10px; line-height: 1.55; user-select: all; }
 .release-tests { margin-top: 16px; padding: 20px 26px; border-radius: 22px; background: rgba(255,255,255,.45); border: 1px solid rgba(255,255,255,.8); box-shadow: 0 16px 44px rgba(70,64,102,.08); }
 .release-tests div { border-top: 0; border-right: 1px solid rgba(94,105,133,.16); padding: 2px 22px; }
 .release-tests div:last-child { border-right: 0; }
