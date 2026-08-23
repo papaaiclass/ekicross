@@ -1,9 +1,9 @@
 export const currentRelease = {
-  version: '4.1.1 Update',
+  version: '4.1.2 Update',
   status: { th: 'เปิดดาวน์โหลด', en: 'Download available' },
   target: 'XTEINK X3',
   tests: [
-    { value: '77/77', th: 'การทดสอบด้วย Python', en: 'Python tests' },
+    { value: '80/80', th: 'การทดสอบด้วย Python', en: 'Python tests' },
     { value: '180/180', th: 'การทดสอบด้วย C++', en: 'C++ tests' },
     { value: 'PASS', th: 'สร้างไฟล์ผ่านโดยไม่มีข้อผิดพลาด', en: 'Clean build' },
   ],
