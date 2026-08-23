@@ -14,7 +14,7 @@ const firmwareDownloads = {
   update: {
     url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.1.2/Ekicross-X3-4.1.2-Update.bin',
     size: '6.22 MB',
-    sha256: '7f5d8dc74eded5f6b2ee30c59a6367ce1ded9816656701193d63b4278cb2985e',
+    sha256: 'd8cc3a19967e2228eaa049fa5c80287eee56bccdc1bbab3fdcd06b4364a3a084',
   },
 };
 

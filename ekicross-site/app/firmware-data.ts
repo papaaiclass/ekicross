@@ -3,7 +3,7 @@ export const currentRelease = {
   status: { th: 'เปิดดาวน์โหลด', en: 'Download available' },
   target: 'XTEINK X3',
   tests: [
-    { value: '80/80', th: 'การทดสอบด้วย Python', en: 'Python tests' },
+    { value: '81/81', th: 'การทดสอบด้วย Python', en: 'Python tests' },
     { value: '180/180', th: 'การทดสอบด้วย C++', en: 'C++ tests' },
     { value: 'PASS', th: 'สร้างไฟล์ผ่านโดยไม่มีข้อผิดพลาด', en: 'Clean build' },
   ],
