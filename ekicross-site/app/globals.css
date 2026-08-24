@@ -355,9 +355,8 @@ main[lang='th'] button {
 .installation-card li ul { margin: 11px 0 0; padding-left: 19px; color: #69748a; font-size: 13px; line-height: 1.8; }
 .installation-card li ul li { margin-top: 5px; }
 .changelog { position: relative; padding: 80px 0 96px; }
-.changelog-heading { display: grid; grid-template-columns: 1.05fr .95fr; gap: 80px; align-items: start; margin-bottom: 36px; }
+.changelog-heading { margin-bottom: 36px; }
 .changelog-heading h2 { margin: 0; font-size: clamp(34px,4vw,52px); line-height: 1.25; letter-spacing: -.045em; }
-.changelog-heading>p { margin: 7px 0 0; color: #566177; font-size: 16px; line-height: 1.9; }
 .changelog-list { display: grid; gap: 18px; }
 .changelog-card { display: grid; grid-template-columns: 245px 1fr; gap: 40px; padding: 32px; border-radius: 28px; background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(227,222,255,.5) 48%, rgba(216,242,255,.5)); }
 .changelog-development { background: linear-gradient(135deg, rgba(255,255,255,.74), rgba(214,240,255,.55) 48%, rgba(229,220,255,.5)); }
@@ -381,7 +380,6 @@ main[lang='th'] button {
   .two-releases { grid-template-columns: 1fr; }
   .addon-card { grid-template-columns: 1fr; }
   .installation-heading, .installation-grid { grid-template-columns: 1fr; gap: 24px; }
-  .changelog-heading { grid-template-columns: 1fr; gap: 24px; }
   .changelog-card { grid-template-columns: 1fr; gap: 20px; }
   .installation-card-03 { grid-column: auto; }
   .developer-profile { grid-template-columns: 1fr; gap: 34px; }

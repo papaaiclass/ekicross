@@ -69,7 +69,6 @@ const copy = {
     installBody: 'อ่านข้อควรทราบและเตรียมเครื่องกับ SD Card ให้พร้อมก่อนเริ่ม จากนั้นทำตามขั้นตอนตามลำดับโดยไม่ข้ามข้อใด',
     changelogLabel: 'บันทึกการเปลี่ยนแปลง',
     changelogTitle: 'การเปลี่ยนแปลงในแต่ละรุ่น',
-    changelogBody: 'เริ่มบันทึกจากรุ่น 4.1.2 ซึ่งใช้เป็นรุ่นอ้างอิงของการเผยแพร่บนเว็บไซต์ เมื่อมีรุ่นใหม่เข้ามา หน้านี้จะแสดงเฉพาะการเปลี่ยนแปลงของ 2–3 รุ่นล่าสุด เพื่อให้อ่านง่ายโดยไม่ไล่ย้อนหลังตั้งแต่เริ่มต้นทั้งหมด',
     hub: 'เว็บไซต์หลักสำหรับข้อมูล รุ่นเฟิร์มแวร์ และไฟล์ดาวน์โหลดของ Ekicross',
     back: 'กลับด้านบน',
   },
@@ -113,7 +112,6 @@ const copy = {
     installBody: 'Review the safety notes, prepare the device and SD card, then complete every step in order without interruption.',
     changelogLabel: 'CHANGELOG',
     changelogTitle: 'What changes with each release',
-    changelogBody: 'The log begins with 4.1.2 as the reference release for this website. As new versions arrive, this page will keep the changes from only the latest two or three releases instead of listing the complete history from the beginning.',
     hub: 'The official home for Ekicross information, firmware releases, and downloads',
     back: 'Back to top',
   },
@@ -367,7 +365,7 @@ export default function Home() {
 
       <section className="changelog wrap" id="changelog">
         <div className="section-kicker"><span>05</span>{t.changelogLabel}</div>
-        <div className="changelog-heading"><h2>{t.changelogTitle}</h2><p>{t.changelogBody}</p></div>
+        <div className="changelog-heading"><h2>{t.changelogTitle}</h2></div>
         <div className="changelog-list">
           {changelogEntries.slice(0, 3).map(entry => <article className={`changelog-card changelog-${entry.state} glass`} key={entry.version}>
             <div className="changelog-version"><span>VERSION</span><strong>{entry.version}</strong><small>{entry.status[lang]}</small></div>
