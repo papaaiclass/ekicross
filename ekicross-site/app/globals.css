@@ -367,6 +367,11 @@ main[lang='th'] button {
 .changelog-current { background: linear-gradient(135deg, rgba(255,255,255,.74), rgba(215,207,255,.58) 48%, rgba(205,235,255,.52)); box-shadow: 0 22px 54px rgba(88,72,170,.14); }
 .changelog-current .changelog-version>span { color: #684bd0; }
 .changelog-previous { background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(238,234,250,.5) 52%, rgba(224,234,246,.48)); }
+.changelog-stable { background: linear-gradient(135deg, rgba(255,255,255,.74), rgba(225,244,237,.52) 50%, rgba(221,236,250,.48)); }
+.changelog-stable .changelog-version>span { color: #27825f; }
+.changelog-legacy { background: linear-gradient(135deg, rgba(255,255,255,.67), rgba(236,233,241,.52) 50%, rgba(226,232,239,.48)); }
+.changelog-legacy .changelog-version>span { color: #747181; }
+.changelog-legacy .changelog-version strong { font-size: 32px; }
 .changelog-version { display: flex; flex-direction: column; justify-content: center; padding: 22px; border: 1px solid rgba(255,255,255,.84); border-radius: 21px; background: rgba(255,255,255,.43); }
 .changelog-version>span { color: #7868d7; font: 700 10px/1.4 var(--font-geist-mono), monospace; letter-spacing: .1em; }
 .changelog-version strong { margin-top: 9px; font-size: 42px; line-height: 1; letter-spacing: -.045em; }

@@ -366,6 +366,78 @@ const changelogEntries = [
       },
     ],
   },
+  {
+    version: '4.1.0',
+    state: 'previous',
+    status: { th: 'รุ่นเผยแพร่ก่อนหน้า', en: 'Earlier public release' },
+    headline: { th: 'เริ่มเติมเครื่องมือที่นักอ่านใช้งานได้จริง', en: 'Reader tools built for everyday use' },
+    changes: [
+      {
+        th: 'เพิ่ม Gallery ที่ควบคุมด้วยปุ่ม แสดงภาพตัวอย่าง 12 รูปต่อหน้า เปิดภาพเต็มจอ เลื่อน หมุน ขยาย และลบรูปผ่านหน้าต่างยืนยัน',
+        en: 'Introduced a button-controlled Gallery with 12 thumbnails per page, full-screen viewing, navigation, rotation, zoom, and confirmed deletion.',
+      },
+      {
+        th: 'เพิ่มปฏิทินเต็มจอสำหรับปุ่มจริง และสถิติการอ่านจากเวลาที่ใช้งาน Reader จริง',
+        en: 'Added a full-screen physical-button calendar and reading statistics collected from actual Reader activity.',
+      },
+      {
+        th: 'เพิ่ม Dark Mode ระหว่างอ่าน พร้อมปรับภาพปก Title Page ความคืบหน้าหลังเปลี่ยนฟอนต์ และรายละเอียดของ Reader',
+        en: 'Added in-reader Dark Mode and refined covers, title pages, progress after font changes, and other Reader details.',
+      },
+      {
+        th: 'แยกวิธีแสดงผลตัวอักษรและภาพ พร้อมเลือก Waveform ให้เหมาะกับแต่ละส่วน เพื่อให้น้ำหนักหมึกคงที่โดยยังรักษารายละเอียดสีเทาของภาพ',
+        en: 'Separated text and image rendering with suitable waveforms to stabilize ink weight while retaining grayscale image detail.',
+      },
+      {
+        th: 'เพิ่มการตรวจ SD migration และ Rollback ก่อนเผยแพร่ เพื่อช่วยลดความเสี่ยงระหว่างการติดตั้ง',
+        en: 'Added SD migration and rollback checks to reduce installation risk.',
+      },
+    ],
+  },
+  {
+    version: '4.0.1',
+    state: 'stable',
+    status: { th: 'Stable · เปิดดาวน์โหลด', en: 'Stable · Download available' },
+    headline: { th: 'รุ่น Stable แรกที่เริ่มเผยแพร่', en: 'The first public Stable release' },
+    changes: [
+      {
+        th: 'วางพื้นฐานการอ่าน EPUB ภาษาไทย เมนูภาษาไทย และการแสดงชื่อหนังสือ ชื่อผู้แต่ง ชื่อไฟล์ และโฟลเดอร์ภาษาไทย',
+        en: 'Established the foundation for Thai EPUB reading, Thai menus, and Thai book titles, authors, filenames, and folders.',
+      },
+      {
+        th: 'ปรับการตัดคำ ตำแหน่งสระและวรรณยุกต์ รวมถึงรองรับฟอนต์เพิ่มเติมจาก SD Card เพื่อให้ภาษาไทยอ่านได้เป็นธรรมชาติขึ้น',
+        en: 'Refined Thai word breaking, vowel and tone-mark placement, and support for additional fonts from the SD card.',
+      },
+      {
+        th: 'จัดหน้าหลักและคำสั่งให้สัมพันธ์กับปุ่มจริงของ X3 เพื่อให้หยิบเครื่องขึ้นมาแล้วใช้งานได้เข้าใจง่าย',
+        en: 'Organized the Home screen and commands around X3 physical buttons for straightforward operation.',
+      },
+      {
+        th: 'เก็บไว้เป็นรุ่น Stable สำหรับผู้ที่ต้องการฐานการใช้งานที่นิ่ง และใช้เป็นไฟล์ย้อนกลับเมื่อจำเป็น',
+        en: 'Remains available as the Stable baseline and a fallback when needed.',
+      },
+    ],
+  },
+  {
+    version: '1.x.x–3.x.x',
+    state: 'legacy',
+    status: { th: 'ช่วงพัฒนาเพื่อใช้งานเอง · ยังไม่แจกจ่าย', en: 'Personal development phase · Not distributed' },
+    headline: { th: 'จากความเข้าใจปัญหาเครื่องติดล็อก สู่พื้นฐานของ Ekicross', en: 'From understanding locked devices to the foundation of Ekicross' },
+    changes: [
+      {
+        th: 'เริ่มจากทำความเข้าใจปัญหาและข้อจำกัดของเครื่องที่ติดล็อก รวมถึงเส้นทางการติดตั้งที่ต้องระมัดระวังเป็นพิเศษ',
+        en: 'Began by understanding the problems and limitations of locked devices, including installation paths that required extra care.',
+      },
+      {
+        th: 'ค่อยๆ ต่อยอดและไล่ปรับปรุงภาษาไทย หน้าตา การควบคุมด้วยปุ่ม และประสบการณ์อ่านจากการใช้งานจริงของตัวเอง',
+        en: 'Gradually refined Thai support, interface design, physical-button control, and the reading experience through personal daily use.',
+      },
+      {
+        th: 'ช่วงนี้ยังทำไว้สำหรับใช้เองและทดสอบแนวทางต่างๆ จึงยังไม่ได้เริ่มแจกจ่ายให้ผู้ใช้ทั่วไป',
+        en: 'These versions were personal builds used to test different directions and were not distributed publicly.',
+      },
+    ],
+  },
 ];
 
 export default function Home() {
@@ -469,7 +541,7 @@ export default function Home() {
         <div className="section-kicker"><span>05</span>{t.changelogLabel}</div>
         <div className="changelog-heading"><h2>{t.changelogTitle}</h2></div>
         <div className="changelog-list">
-          {changelogEntries.slice(0, 3).map(entry => <article className={`changelog-card changelog-${entry.state} glass`} key={entry.version}>
+          {changelogEntries.map(entry => <article className={`changelog-card changelog-${entry.state} glass`} key={entry.version}>
             <div className="changelog-version"><span>VERSION</span><strong>{entry.version}</strong><small>{entry.status[lang]}</small><h3>{entry.headline[lang]}</h3></div>
             <ul>{entry.changes.map(change => <li key={change.th}><p>{change[lang]}</p></li>)}</ul>
           </article>)}
