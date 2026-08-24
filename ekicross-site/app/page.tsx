@@ -285,7 +285,7 @@ const changelogEntries = [
     headline: { th: 'Dark Interface ใหม่ และยกระดับแกน Connect', en: 'A new Dark Interface and upgraded Connect core' },
     changes: [
       {
-        th: 'เพิ่ม Dark Interface พื้นดำทั้งระบบพร้อมจำสถานะ โดยแยกอิสระจากโหมดมืดของ Reader และรักษาปกหนังสือกับภาพใน Gallery ไม่ให้กลับขั้ว',
+        th: 'เพิ่ม Dark Interface พื้นดำทั้งระบบพร้อมจำสถานะ โดยแยกอิสระจากโหมดมืดของ Reader และรักษาปกหนังสือกับภาพใน Gallery ไม่ให้กลับสีภาพ',
         en: 'Added a persistent system-wide Dark Interface, separate from Reader Dark Mode, while keeping book covers and Gallery images from being inverted.',
       },
       {
