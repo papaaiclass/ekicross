@@ -241,8 +241,12 @@ const changelogEntries = [
         en: 'Reworking the shared connection core used by Wi-Fi, Calibre, and other network features into a more consistent system.',
       },
       {
-        th: 'ปรับการรับมือเมื่อเชื่อมต่อไม่สำเร็จ เพื่อให้ระบบหยุดหรือย้อนกลับได้อย่างเหมาะสมโดยไม่ทำให้ส่วนอื่นล่มตามไปด้วย',
-        en: 'Improving failed-connection handling so an operation can stop or recover cleanly without bringing down unrelated parts of the system.',
+        th: 'จัดระเบียบการทำงานของ Wi-Fi และ Calibre ให้ใช้แนวทางเดียวกันในการเริ่มเชื่อมต่อ ตรวจสอบสถานะ และจบการทำงาน',
+        en: 'Aligning Wi-Fi and Calibre around the same flow for starting a connection, checking its state, and ending the operation.',
+      },
+      {
+        th: 'ปรับการรับมือเมื่อเชื่อมต่อไม่สำเร็จ เพื่อให้หยุดการทำงานได้อย่างเหมาะสม โดยไม่ทำให้ส่วนอื่นของระบบล่มตามไปด้วย',
+        en: 'Improving failed-connection handling so the operation can stop cleanly without bringing down unrelated parts of the system.',
       },
     ],
   },
@@ -256,8 +260,20 @@ const changelogEntries = [
         en: 'Refined full justification for Thai text, with more natural word spacing and paragraph edges while reading.',
       },
       {
-        th: 'เข้าถึง Gallery ได้รวดเร็วขึ้น พร้อมหน้าสถิติการอ่านแบบใหม่ที่สรุปข้อมูลจากการใช้งานจริง',
-        en: 'Made Gallery quicker to access and introduced a redesigned reading statistics screen based on actual use.',
+        th: 'เข้าถึง Gallery ได้รวดเร็วขึ้น และแสดงภาพตัวอย่างได้ 12 รูปต่อหน้า รองรับภาพได้ 256 รูปต่อโฟลเดอร์',
+        en: 'Made Gallery quicker to access, with 12 thumbnails per page and support for 256 images in each folder.',
+      },
+      {
+        th: 'เปิดภาพเต็มจอโดยไม่มีปุ่มบังภาพ พร้อมเลื่อนไปรูปก่อนหน้า–ถัดไป หมุน ขยาย และลบรูปผ่านหน้าต่างยืนยัน',
+        en: 'Added an unobstructed full-screen image view with previous/next navigation, rotation, zoom, and confirmed deletion.',
+      },
+      {
+        th: 'เพิ่มหน้าสถิติการอ่านแบบใหม่ แสดงเวลาอ่าน จำนวนวันต่อเนื่อง จำนวนครั้ง ช่วงอ่านที่ยาวที่สุด รวมถึงวันและช่วงเวลาที่อ่านบ่อยจากข้อมูลการอ่านจริง',
+        en: 'Added a redesigned statistics screen showing reading time, streaks, sessions, longest session, and common reading days and times from actual Reader activity.',
+      },
+      {
+        th: 'เพิ่มปฏิทินเต็มจอสำหรับเครื่องที่ไม่มีจอสัมผัส ใช้ปุ่มจริงเปลี่ยนเดือนและปี พร้อมแยกวันปัจจุบันออกจากเดือนที่กำลังเปิดดู',
+        en: 'Added a full-screen calendar designed for physical buttons, with month and year navigation and a clear distinction between today and the viewed month.',
       },
       {
         th: 'ปรับปรุง Dark Mode ให้ดีขึ้น เพื่อให้น้ำหนักตัวอักษรและการแสดงผลบนจอ E-Ink ลงตัวกว่าเดิม',
@@ -369,7 +385,7 @@ export default function Home() {
         <div className="changelog-list">
           {changelogEntries.slice(0, 3).map(entry => <article className={`changelog-card changelog-${entry.state} glass`} key={entry.version}>
             <div className="changelog-version"><span>VERSION</span><strong>{entry.version}</strong><small>{entry.status[lang]}</small></div>
-            <ol>{entry.changes.map((change, index) => <li key={change.th}><span>{String(index + 1).padStart(2, '0')}</span><p>{change[lang]}</p></li>)}</ol>
+            <ul>{entry.changes.map(change => <li key={change.th}><p>{change[lang]}</p></li>)}</ul>
           </article>)}
         </div>
       </section>
