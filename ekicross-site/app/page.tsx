@@ -30,7 +30,7 @@ const assetPath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}$
 
 const copy = {
   th: {
-    nav: ['เรื่องราว', 'สิ่งที่พัฒนา', 'รุ่นเฟิร์มแวร์', 'การติดตั้ง'],
+    nav: ['เรื่องราว', 'สิ่งที่พัฒนา', 'รุ่นเฟิร์มแวร์', 'การติดตั้ง', 'การเปลี่ยนแปลง'],
     eyebrow: 'EKICROSS FOR XTEINK X3',
     title: 'เฟิร์มแวร์ภาษาไทย\nสำหรับคนรักการอ่าน',
     intro: 'Ekicross เริ่มจากความตั้งใจที่จะทำให้ X3 ใช้ภาษาไทยได้อย่างสมบูรณ์ และควบคุมทุกอย่างได้สะดวกด้วยปุ่มจริงของเครื่อง',
@@ -67,11 +67,14 @@ const copy = {
     installLabel: 'การติดตั้ง',
     installTitle: 'คู่มือการติดตั้ง Ekicross',
     installBody: 'อ่านข้อควรทราบและเตรียมเครื่องกับ SD Card ให้พร้อมก่อนเริ่ม จากนั้นทำตามขั้นตอนตามลำดับโดยไม่ข้ามข้อใด',
+    changelogLabel: 'บันทึกการเปลี่ยนแปลง',
+    changelogTitle: 'การเปลี่ยนแปลงในแต่ละรุ่น',
+    changelogBody: 'เริ่มบันทึกจากรุ่น 4.1.2 ซึ่งใช้เป็นรุ่นอ้างอิงของการเผยแพร่บนเว็บไซต์ เมื่อมีรุ่นใหม่เข้ามา หน้านี้จะแสดงเฉพาะการเปลี่ยนแปลงของ 2–3 รุ่นล่าสุด เพื่อให้อ่านง่ายโดยไม่ไล่ย้อนหลังตั้งแต่เริ่มต้นทั้งหมด',
     hub: 'เว็บไซต์หลักสำหรับข้อมูล รุ่นเฟิร์มแวร์ และไฟล์ดาวน์โหลดของ Ekicross',
     back: 'กลับด้านบน',
   },
   en: {
-    nav: ['Story', 'What’s built', 'Firmware', 'Installation'],
+    nav: ['Story', 'What’s built', 'Firmware', 'Installation', 'Changelog'],
     eyebrow: 'EKICROSS FOR XTEINK X3',
     title: 'Thai firmware\nfor people who love reading',
     intro: 'Ekicross began with a simple need: make Thai work beautifully and completely on X3, with everything remaining natural to use through the device’s physical buttons.',
@@ -108,6 +111,9 @@ const copy = {
     installLabel: 'INSTALLATION',
     installTitle: 'Installing Ekicross',
     installBody: 'Review the safety notes, prepare the device and SD card, then complete every step in order without interruption.',
+    changelogLabel: 'CHANGELOG',
+    changelogTitle: 'What changes with each release',
+    changelogBody: 'The log begins with 4.1.2 as the reference release for this website. As new versions arrive, this page will keep the changes from only the latest two or three releases instead of listing the complete history from the beginning.',
     hub: 'The official home for Ekicross information, firmware releases, and downloads',
     back: 'Back to top',
   },
@@ -226,6 +232,43 @@ const installationCards = {
   ],
 };
 
+const changelogEntries = [
+  {
+    version: '4.1.3',
+    state: 'development',
+    status: { th: 'กำลังพัฒนา · ยังไม่เปิดดาวน์โหลด', en: 'In development · Not yet available' },
+    changes: [
+      {
+        th: 'ยกระดับระบบการเชื่อมต่อส่วนกลางที่ใช้ร่วมกันทั้ง Wi-Fi, Calibre และฟังก์ชันเครือข่ายส่วนอื่นๆ ให้ทำงานเป็นระบบเดียวกันมากขึ้น',
+        en: 'Reworking the shared connection core used by Wi-Fi, Calibre, and other network features into a more consistent system.',
+      },
+      {
+        th: 'ปรับการรับมือเมื่อเชื่อมต่อไม่สำเร็จ เพื่อให้ระบบหยุดหรือย้อนกลับได้อย่างเหมาะสมโดยไม่ทำให้ส่วนอื่นล่มตามไปด้วย',
+        en: 'Improving failed-connection handling so an operation can stop or recover cleanly without bringing down unrelated parts of the system.',
+      },
+    ],
+  },
+  {
+    version: '4.1.2',
+    state: 'reference',
+    status: { th: 'รุ่นอ้างอิงเริ่มต้น', en: 'Initial reference release' },
+    changes: [
+      {
+        th: 'ปรับการจัดข้อความเต็มบรรทัดให้เหมาะกับภาษาไทยมากขึ้น เพื่อให้ระยะคำและขอบย่อหน้าดูเป็นธรรมชาติขณะอ่าน',
+        en: 'Refined full justification for Thai text, with more natural word spacing and paragraph edges while reading.',
+      },
+      {
+        th: 'เข้าถึง Gallery ได้รวดเร็วขึ้น พร้อมหน้าสถิติการอ่านแบบใหม่ที่สรุปข้อมูลจากการใช้งานจริง',
+        en: 'Made Gallery quicker to access and introduced a redesigned reading statistics screen based on actual use.',
+      },
+      {
+        th: 'ปรับปรุง Dark Mode ให้ดีขึ้น เพื่อให้น้ำหนักตัวอักษรและการแสดงผลบนจอ E-Ink ลงตัวกว่าเดิม',
+        en: 'Improved Dark Mode for more balanced text weight and E-Ink rendering.',
+      },
+    ],
+  },
+];
+
 export default function Home() {
   const [lang, setLang] = useState<Lang>('th');
   const t = copy[lang];
@@ -235,7 +278,7 @@ export default function Home() {
       <div className="ambient ambient-one" /><div className="ambient ambient-two" /><div className="noise" />
       <header className="site-header glass">
         <a className="parent-brand" href="#top" aria-label="Ekicross"><img src={assetPath('/ekicross-parent-logo-transparent.png')} alt="Ekicross" /></a>
-        <nav aria-label={lang === 'th' ? 'เมนูหลัก' : 'Main navigation'}>{t.nav.map((item, index) => <a key={item} href={['#story', '#development', '#release', '#install'][index]}>{item}</a>)}</nav>
+        <nav aria-label={lang === 'th' ? 'เมนูหลัก' : 'Main navigation'}>{t.nav.map((item, index) => <a key={item} href={['#story', '#development', '#release', '#install', '#changelog'][index]}>{item}</a>)}</nav>
         <div className="language" aria-label="Language"><button className={lang === 'th' ? 'active' : ''} onClick={() => setLang('th')}>TH</button><button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')}>EN</button></div>
       </header>
 
@@ -319,6 +362,17 @@ export default function Home() {
               <List>{card.items.map(item => <li key={item.title}><div><strong>{item.title}</strong><p>{item.body}</p>{'highlight' in item && <p className="install-highlight">{item.highlight}</p>}{item.details.length > 0 && <ul>{item.details.map(detail => <li key={detail}>{detail}</li>)}</ul>}</div></li>)}</List>
             </article>;
           })}
+        </div>
+      </section>
+
+      <section className="changelog wrap" id="changelog">
+        <div className="section-kicker"><span>05</span>{t.changelogLabel}</div>
+        <div className="changelog-heading"><h2>{t.changelogTitle}</h2><p>{t.changelogBody}</p></div>
+        <div className="changelog-list">
+          {changelogEntries.slice(0, 3).map(entry => <article className={`changelog-card changelog-${entry.state} glass`} key={entry.version}>
+            <div className="changelog-version"><span>VERSION</span><strong>{entry.version}</strong><small>{entry.status[lang]}</small></div>
+            <ol>{entry.changes.map((change, index) => <li key={change.th}><span>{String(index + 1).padStart(2, '0')}</span><p>{change[lang]}</p></li>)}</ol>
+          </article>)}
         </div>
       </section>
 
