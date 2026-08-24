@@ -361,6 +361,7 @@ main[lang='th'] button {
 .changelog-card { display: grid; grid-template-columns: 245px 1fr; gap: 40px; padding: 32px; border-radius: 28px; background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(227,222,255,.5) 48%, rgba(216,242,255,.5)); }
 .changelog-development { background: linear-gradient(135deg, rgba(255,255,255,.74), rgba(214,240,255,.55) 48%, rgba(229,220,255,.5)); }
 .changelog-development .changelog-version>span { color: #277f9e; }
+.changelog-previous { background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(238,234,250,.5) 52%, rgba(224,234,246,.48)); }
 .changelog-version { display: flex; flex-direction: column; justify-content: center; padding: 22px; border: 1px solid rgba(255,255,255,.84); border-radius: 21px; background: rgba(255,255,255,.43); }
 .changelog-version>span { color: #7868d7; font: 700 10px/1.4 var(--font-geist-mono), monospace; letter-spacing: .1em; }
 .changelog-version strong { margin-top: 9px; font-size: 42px; line-height: 1; letter-spacing: -.045em; }

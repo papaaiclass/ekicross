@@ -281,6 +281,29 @@ const changelogEntries = [
       },
     ],
   },
+  {
+    version: '4.1.1',
+    state: 'previous',
+    status: { th: 'รุ่นก่อนหน้า', en: 'Previous release' },
+    changes: [
+      {
+        th: 'ปรับทางลัดเข้าสู่ Gallery ให้เข้าถึงได้รวดเร็วขึ้นจากการใช้งานปกติของเครื่อง',
+        en: 'Made Gallery quicker to reach from the device’s regular navigation flow.',
+      },
+      {
+        th: 'เพิ่มหน้าสถิติการอ่านแบบใหม่ เพื่อดูเวลาอ่าน จำนวนวันต่อเนื่อง และรูปแบบการอ่านจากข้อมูลที่เกิดขึ้นจริงใน Reader',
+        en: 'Introduced a redesigned statistics screen for reading time, streaks, and patterns recorded from actual Reader activity.',
+      },
+      {
+        th: 'ปรับปรุง Dark Mode ให้แสดงน้ำหนักตัวอักษรและรายละเอียดบนจอ E-Ink ได้สมดุลกว่าเดิม',
+        en: 'Improved Dark Mode for more balanced text weight and detail on the E-Ink display.',
+      },
+      {
+        th: 'ปรับการจัดข้อความเต็มบรรทัดให้เข้ากับภาษาไทยมากขึ้น ลดช่องไฟที่ดูห่างหรือไม่เป็นธรรมชาติระหว่างคำ',
+        en: 'Refined full justification for Thai text to reduce spacing that appeared too wide or unnatural between words.',
+      },
+    ],
+  },
 ];
 
 export default function Home() {
