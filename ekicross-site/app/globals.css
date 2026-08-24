@@ -341,7 +341,8 @@ main[lang='th'] button {
 .installation-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 18px; align-items: start; }
 .installation-card { padding: 32px; border-radius: 28px; background: linear-gradient(135deg, rgba(255,255,255,.7), rgba(238,223,255,.46)); }
 .installation-card-02 { background: linear-gradient(135deg, rgba(255,255,255,.7), rgba(213,241,255,.5)); }
-.installation-card-03 { grid-column: 1 / -1; background: linear-gradient(135deg, rgba(255,255,255,.7), rgba(255,233,204,.48)); }
+.installation-card-03 { grid-column: 1 / -1; background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(225,216,255,.54) 52%, rgba(214,239,255,.48)); }
+.installation-card-04 { grid-column: 1 / -1; background: linear-gradient(135deg, rgba(255,255,255,.7), rgba(255,233,204,.48)); }
 .installation-card-heading { display: grid; grid-template-columns: 38px 1fr; gap: 12px; align-items: start; margin-bottom: 24px; }
 .installation-card-heading>span { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; color: #7868dd; background: rgba(255,255,255,.67); border: 1px solid rgba(255,255,255,.86); font: 700 10px/1 var(--font-geist-mono), monospace; }
 .installation-card .install-highlight { margin-top: 12px; padding: 13px 15px; border: 1px solid rgba(125,92,225,.18); border-radius: 14px; color: #4d4168; background: linear-gradient(120deg, rgba(237,226,255,.82), rgba(216,243,255,.78)); font-weight: 700; line-height: 1.75; }
@@ -383,7 +384,7 @@ main[lang='th'] button {
   .addon-card { grid-template-columns: 1fr; }
   .installation-heading, .installation-grid { grid-template-columns: 1fr; gap: 24px; }
   .changelog-card { grid-template-columns: 1fr; gap: 20px; }
-  .installation-card-03 { grid-column: auto; }
+  .installation-card-03, .installation-card-04 { grid-column: auto; }
   .developer-profile { grid-template-columns: 1fr; gap: 34px; }
   .developer-profile figure { width: min(520px, 86vw); justify-self: center; }
 }

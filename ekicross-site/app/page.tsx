@@ -176,6 +176,39 @@ const installationCards = {
     },
     {
       number: '03',
+      title: 'SD Card สองใบ เพื่อประสบการณ์ที่ลื่นไหล',
+      kind: 'steps',
+      items: [
+        {
+          title: 'เป็นแนวทางเสริม ไม่ใช่ขั้นตอนบังคับ',
+          body: 'ผู้ใช้ยังติดตั้งด้วยการ์ดใบเดียวได้ตามขั้นตอนปกติ แต่สำหรับผู้ที่อัปเดตหลายรุ่น การแยกการ์ดข้อมูลออกจากการ์ดติดตั้งจะช่วยลดการย้ายไฟล์ซ้ำ ไม่รบกวนโครงสร้างที่จัดไว้ และกลับมาอ่านต่อได้รวดเร็วหลังอัปเดต',
+          details: [],
+        },
+        {
+          title: 'ปิดเครื่องและถอดการ์ดประจำ',
+          body: 'ปิดเครื่องให้สมบูรณ์ก่อนถอด SD Card ที่ใช้เก็บข้อมูลออก แล้วเก็บการ์ดใบนี้ไว้โดยไม่แก้ไขไฟล์ภายใน',
+          details: [],
+        },
+        {
+          title: 'เตรียมการ์ดติดตั้ง',
+          body: 'นำการ์ดเปล่าอีกใบมาฟอร์แมตเป็น exFAT เปลี่ยนชื่อไฟล์เฟิร์มแวร์เป็น firmware.bin แล้ววางไว้ในพื้นที่หลักของการ์ดตามขั้นตอนการติดตั้งปกติ',
+          highlight: 'ใช้การ์ดใบนี้สำหรับติดตั้งแต่ละเวอร์ชัน โดยไม่ต้องนำหนังสือหรือโฟลเดอร์ใช้งานประจำมาไว้ในการ์ดเดียวกัน',
+          details: [],
+        },
+        {
+          title: 'ติดตั้งและรอให้ระบบกลับมาสมบูรณ์',
+          body: 'ติดตั้งเฟิร์มแวร์ตามขั้นตอนจนแถบความคืบหน้าครบ 100% จากนั้นรอให้เครื่องเริ่มต้นใหม่และกลับเข้าสู่ระบบตามปกติก่อนดำเนินการต่อ',
+          details: [],
+        },
+        {
+          title: 'สลับกลับมาใช้การ์ดประจำ',
+          body: 'ปิดเครื่องอีกครั้ง ถอดการ์ดติดตั้งออก แล้วใส่การ์ดประจำกลับเข้าไป เมื่อเปิดเครื่อง หนังสือ โครงสร้างโฟลเดอร์ และการตั้งค่าที่บันทึกไว้บนการ์ดจะกลับมาพร้อมใช้งาน',
+          details: [],
+        },
+      ],
+    },
+    {
+      number: '04',
       title: 'ระบบฟอนต์ภาษาไทยและการปรับแต่ง',
       kind: 'notes',
       items: [
@@ -220,6 +253,18 @@ const installationCards = {
     },
     {
       number: '03',
+      title: 'Two SD cards for a smoother update experience',
+      kind: 'steps',
+      items: [
+        { title: 'An optional workflow, not a requirement', body: 'A single card still works with the standard steps. For users who update frequently, separating the data card from the installation card avoids repeated file moves, preserves the prepared structure, and makes it quicker to return to reading after an update.', details: [] },
+        { title: 'Power off and remove the everyday card', body: 'Shut the device down completely before removing the SD card that holds your data. Keep this card unchanged while updating.', details: [] },
+        { title: 'Prepare the installation card', body: 'Format the second card as exFAT, rename the firmware file to firmware.bin, and place it at the card root as described in the standard installation steps.', highlight: 'Use this card for each firmware installation without placing your everyday books or working folders on it.', details: [] },
+        { title: 'Install and wait for a complete restart', body: 'Complete the firmware update through 100%, then wait until the device has restarted and returned to normal operation before continuing.', details: [] },
+        { title: 'Return to the everyday card', body: 'Power off again, remove the installation card, and reinsert the everyday data card. After startup, books, folders, and settings stored on that card return ready for use.', details: [] },
+      ],
+    },
+    {
+      number: '04',
       title: 'Thai fonts and customization',
       kind: 'notes',
       items: [
