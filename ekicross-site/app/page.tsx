@@ -313,7 +313,7 @@ const changelogEntries = [
         en: 'Stabilized Reader sharpness after page turns and reduced X3 sleep-screen ghosting with a final quality refresh.',
       },
       {
-        th: 'รักษาฟังก์ชันเดิม ระบบ Dual-Slot, Rollback และการติดตั้งแบบ Fail-closed โดยไม่เขียน Bootloader หรือ Partition Table',
+        th: 'มั่นใจกว่าเดิมด้วยระบบ Dual-Slot, Rollback และการติดตั้งแบบ Fail-closed โดยไม่เขียน Bootloader หรือ Partition Table ที่พัฒนาให้ดียิ่งขึ้น',
         en: 'Preserves existing features, dual-slot rollback, and fail-closed installation without writing the bootloader or partition table.',
       },
     ],
