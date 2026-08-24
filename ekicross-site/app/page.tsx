@@ -235,9 +235,10 @@ const changelogEntries = [
     version: '4.1.3',
     state: 'development',
     status: { th: 'กำลังพัฒนา · ยังไม่เปิดดาวน์โหลด', en: 'In development · Not yet available' },
+    headline: { th: 'ยกระดับแกน Connect ใหม่ทั้งระบบ', en: 'A system-wide Connect Core upgrade' },
     changes: [
       {
-        th: 'ยกระดับระบบการเชื่อมต่อส่วนกลางที่ใช้ร่วมกันทั้ง Wi-Fi, Calibre และฟังก์ชันเครือข่ายส่วนอื่นๆ ให้ทำงานเป็นระบบเดียวกันมากขึ้น',
+        th: 'สร้างและยกระดับแกน Connect กลางที่ใช้ร่วมกันทั้ง Wi-Fi, Calibre และฟังก์ชันเครือข่ายส่วนอื่นๆ ให้ทำงานเป็นระบบเดียวกันมากขึ้น',
         en: 'Reworking the shared connection core used by Wi-Fi, Calibre, and other network features into a more consistent system.',
       },
       {
@@ -254,11 +255,8 @@ const changelogEntries = [
     version: '4.1.2',
     state: 'reference',
     status: { th: 'รุ่นอ้างอิงเริ่มต้น', en: 'Initial reference release' },
+    headline: { th: 'Gallery และเครื่องมือสำหรับนักอ่าน', en: 'Gallery and tools for readers' },
     changes: [
-      {
-        th: 'ปรับการจัดข้อความเต็มบรรทัดให้เหมาะกับภาษาไทยมากขึ้น เพื่อให้ระยะคำและขอบย่อหน้าดูเป็นธรรมชาติขณะอ่าน',
-        en: 'Refined full justification for Thai text, with more natural word spacing and paragraph edges while reading.',
-      },
       {
         th: 'เข้าถึง Gallery ได้รวดเร็วขึ้น และแสดงภาพตัวอย่างได้ 12 รูปต่อหน้า รองรับภาพได้ 256 รูปต่อโฟลเดอร์',
         en: 'Made Gallery quicker to access, with 12 thumbnails per page and support for 256 images in each folder.',
@@ -285,22 +283,19 @@ const changelogEntries = [
     version: '4.1.1',
     state: 'previous',
     status: { th: 'รุ่นก่อนหน้า', en: 'Previous release' },
+    headline: { th: 'ปรับการจัดข้อความภาษาไทย', en: 'Refined Thai text layout' },
     changes: [
       {
-        th: 'ปรับทางลัดเข้าสู่ Gallery ให้เข้าถึงได้รวดเร็วขึ้นจากการใช้งานปกติของเครื่อง',
-        en: 'Made Gallery quicker to reach from the device’s regular navigation flow.',
+        th: 'ปรับการจัดข้อความเต็มบรรทัดให้เหมาะกับโครงสร้างภาษาไทยมากขึ้น เพื่อให้ขอบย่อหน้าดูเรียบร้อยโดยไม่บังคับระยะคำมากเกินไป',
+        en: 'Refined full justification around Thai text structure, keeping paragraph edges tidy without forcing excessive word spacing.',
       },
       {
-        th: 'เพิ่มหน้าสถิติการอ่านแบบใหม่ เพื่อดูเวลาอ่าน จำนวนวันต่อเนื่อง และรูปแบบการอ่านจากข้อมูลที่เกิดขึ้นจริงใน Reader',
-        en: 'Introduced a redesigned statistics screen for reading time, streaks, and patterns recorded from actual Reader activity.',
+        th: 'ปรับระยะห่างระหว่างคำหลังการจัดเต็มบรรทัด ลดช่องว่างที่กว้างผิดธรรมชาติในบรรทัดที่มีคำไทยสั้น–ยาวปะปนกัน',
+        en: 'Adjusted spacing after justification to reduce unnatural gaps in lines containing a mix of short and long Thai words.',
       },
       {
-        th: 'ปรับปรุง Dark Mode ให้แสดงน้ำหนักตัวอักษรและรายละเอียดบนจอ E-Ink ได้สมดุลกว่าเดิม',
-        en: 'Improved Dark Mode for more balanced text weight and detail on the E-Ink display.',
-      },
-      {
-        th: 'ปรับการจัดข้อความเต็มบรรทัดให้เข้ากับภาษาไทยมากขึ้น ลดช่องไฟที่ดูห่างหรือไม่เป็นธรรมชาติระหว่างคำ',
-        en: 'Refined full justification for Thai text to reduce spacing that appeared too wide or unnatural between words.',
+        th: 'ปรับจังหวะการตัดบรรทัดและขอบย่อหน้าให้ต่อเนื่องขึ้น เพื่อให้สายตาไล่อ่านข้อความยาวได้เป็นธรรมชาติกว่าเดิม',
+        en: 'Refined line breaks and paragraph edges for a more continuous reading rhythm across long passages.',
       },
     ],
   },
@@ -407,7 +402,7 @@ export default function Home() {
         <div className="changelog-heading"><h2>{t.changelogTitle}</h2></div>
         <div className="changelog-list">
           {changelogEntries.slice(0, 3).map(entry => <article className={`changelog-card changelog-${entry.state} glass`} key={entry.version}>
-            <div className="changelog-version"><span>VERSION</span><strong>{entry.version}</strong><small>{entry.status[lang]}</small></div>
+            <div className="changelog-version"><span>VERSION</span><strong>{entry.version}</strong><small>{entry.status[lang]}</small><h3>{entry.headline[lang]}</h3></div>
             <ul>{entry.changes.map(change => <li key={change.th}><p>{change[lang]}</p></li>)}</ul>
           </article>)}
         </div>
