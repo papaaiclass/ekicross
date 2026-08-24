@@ -18,6 +18,14 @@ const firmwareDownloads = {
   },
 };
 
+const extensionPack = {
+  url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.1.2/Ekicross-X3-4.1.2-SD-Addon.zip',
+  checksumUrl: 'https://github.com/papaaiclass/ekicross/releases/download/v4.1.2/Ekicross-X3-4.1.2-SD-Addon.zip.sha256',
+  size: '3.89 MB',
+  sha256: '37853d4329925cab0733e93a9fb435e37fe8984bd28f27779c015febdc6dd424',
+  folders: ['dictionaries', 'Notes', 'screenshots', 'sleep', 'books', 'fonts', 'Articles', 'Gallery'],
+};
+
 const assetPath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
 
 const copy = {
@@ -49,6 +57,13 @@ const copy = {
     renameFile: 'ก่อนใช้งาน โปรดเปลี่ยนชื่อไฟล์เป็น firmware.bin',
     warningTitle: 'ก่อนติดตั้ง',
     warning: 'เฟิร์มแวร์นี้ใช้ได้กับ XTEINK X3 เท่านั้น ห้ามติดตั้งบน X4 ก่อนอัปเดตควรสำรองหนังสือและข้อมูลสำคัญ ตรวจสอบว่าแบตเตอรี่มีเพียงพอ และห้ามปิดเครื่องหรือถอด SD Card ระหว่างติดตั้ง',
+    addonLabel: 'ส่วนเสริมสำหรับ SD Card',
+    addonTitle: 'Ekicross Extension Pack',
+    addonBody: 'สำหรับผู้ที่ติดตั้งเฟิร์มแวร์แล้ว แต่โฟลเดอร์สำหรับใช้งานบน SD Card ยังไม่ครบ ภายในมีพจนานุกรมอังกฤษ–ไทย ฟอนต์ Google Sans และ Sarabun พร้อมโครงสร้างโฟลเดอร์ที่จำเป็น',
+    addonGuide: 'สำรองข้อมูลเดิมก่อน จากนั้นแตกไฟล์ ZIP แล้วจัดวางโฟลเดอร์ที่มีให้ตรงกับโครงสร้างหลักของ SD Card',
+    addonContents: '8 โฟลเดอร์ · พจนานุกรมอังกฤษ–ไทย · ฟอนต์ภาษาไทย 2 ชุด',
+    addonDownload: 'ดาวน์โหลด Extension Pack',
+    addonChecksum: 'ดาวน์โหลดไฟล์ SHA-256',
     installLabel: 'การติดตั้ง',
     installTitle: 'คู่มือการติดตั้ง Ekicross',
     installBody: 'อ่านข้อควรทราบและเตรียมเครื่องกับ SD Card ให้พร้อมก่อนเริ่ม จากนั้นทำตามขั้นตอนตามลำดับโดยไม่ข้ามข้อใด',
@@ -83,6 +98,13 @@ const copy = {
     renameFile: 'Before use, rename the downloaded file to firmware.bin',
     warningTitle: 'Before installing',
     warning: 'This firmware is only for XTEINK X3, not X4. Back up important books and data, charge the battery, and never power off or remove the SD card during installation.',
+    addonLabel: 'SD CARD ADD-ON',
+    addonTitle: 'Ekicross Extension Pack',
+    addonBody: 'For firmware users whose SD card folders are incomplete. The pack includes an English–Thai dictionary, Google Sans and Sarabun fonts, and the required folder structure.',
+    addonGuide: 'Back up existing data first. Extract the ZIP, then arrange the included folders to match the root structure of your SD card.',
+    addonContents: '8 folders · English–Thai dictionary · 2 Thai font families',
+    addonDownload: 'Download Extension Pack',
+    addonChecksum: 'Download SHA-256 file',
     installLabel: 'INSTALLATION',
     installTitle: 'Installing Ekicross',
     installBody: 'Review the safety notes, prepare the device and SD card, then complete every step in order without interruption.',
@@ -268,6 +290,22 @@ export default function Home() {
         </div>
         <div className="test-grid release-tests">{currentRelease.tests.map(test => <div key={test.value}><strong>{test.value}</strong><span>{test[lang]}</span></div>)}</div>
         <aside className="warning glass"><span>!</span><div><h3>{t.warningTitle}</h3><p>{t.warning}</p></div></aside>
+        <article className="addon-card glass" aria-labelledby="addon-title">
+          <div className="addon-copy">
+            <span className="addon-label">{t.addonLabel}</span>
+            <h3 id="addon-title">{t.addonTitle}</h3>
+            <p>{t.addonBody}</p>
+            <p className="addon-guide">{t.addonGuide}</p>
+            <div className="addon-folders" aria-label={lang === 'th' ? 'โฟลเดอร์ภายในแพ็ก' : 'Folders included in the pack'}>{extensionPack.folders.map(folder => <code key={folder}>{folder}</code>)}</div>
+          </div>
+          <div className="addon-download">
+            <span>{t.addonContents}</span>
+            <a className="download-button" href={extensionPack.url}>{t.addonDownload}<span>↓</span></a>
+            <p>{extensionPack.size} · ZIP</p>
+            <a className="checksum-file-link" href={extensionPack.checksumUrl}>{t.addonChecksum}</a>
+            <details className="checksum"><summary>{t.checksum}</summary><code>{extensionPack.sha256}</code></details>
+          </div>
+        </article>
       </section>
 
       <section className="installation wrap" id="install">
