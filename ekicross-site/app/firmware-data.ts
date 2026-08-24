@@ -3,7 +3,7 @@ export const currentRelease = {
   status: { th: 'Final · เปิดดาวน์โหลด', en: 'Final · Download available' },
   target: 'XTEINK X3',
   highlights: [
-    { th: 'Dark Interface ทั้งระบบ โดยปกหนังสือและภาพ Gallery ไม่กลับขั้ว', en: 'A system-wide Dark Interface without inverting book covers or Gallery images' },
+    { th: 'New! ขอแนะนำ Dark Interface เต็มระบบ', en: 'New! Introducing a system-wide Dark Interface' },
     { th: 'ปรับภาษาไทย ฟอนต์ขนาดใหญ่ และความคมของ Reader', en: 'Major Thai, large-font, and Reader clarity refinements' },
     { th: 'ยกระดับแกน Connect สำหรับ Wi-Fi, Web transfer, Calibre/WebDAV, Hotspot และ OPDS', en: 'An upgraded Connect core for Wi-Fi, Web transfer, Calibre/WebDAV, Hotspot, and OPDS' },
   ],
