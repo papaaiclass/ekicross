@@ -12,17 +12,17 @@ const firmwareDownloads = {
     sha256: '2e63729e89467f0aa0a2ff5186af59441e990de437d118eff0769087cdfdcfbd',
   },
   update: {
-    url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.1.2/Ekicross-X3-4.1.2-Update.bin',
+    url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.2.0/firmware.bin',
     size: '6.22 MB',
-    sha256: 'd8cc3a19967e2228eaa049fa5c80287eee56bccdc1bbab3fdcd06b4364a3a084',
+    sha256: '06cd360abe0ecbdfc6ef1578ac7d4d37b13676b6e247af9f1c0b412efabf79d0',
   },
 };
 
 const extensionPack = {
-  url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.1.2/Ekicross-X3-4.1.2-SD-Addon.zip',
-  checksumUrl: 'https://github.com/papaaiclass/ekicross/releases/download/v4.1.2/Ekicross-X3-4.1.2-SD-Addon.zip.sha256',
+  url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.2.0/Ekicross-X3-4.2.0-SD-Addon.zip',
+  checksumUrl: 'https://github.com/papaaiclass/ekicross/releases/download/v4.2.0/Ekicross-X3-4.2.0-SD-Addon.zip.sha256',
   size: '3.89 MB',
-  sha256: '37853d4329925cab0733e93a9fb435e37fe8984bd28f27779c015febdc6dd424',
+  sha256: '863d4e0da052d60bfdd9952a237b1571f07f4346826468788708dd6298a86313',
   folders: ['dictionaries', 'Notes', 'screenshots', 'sleep', 'books', 'fonts', 'Articles', 'Gallery'],
 };
 
@@ -49,16 +49,17 @@ const copy = {
     developmentIntro: 'ความพิถีพิถันซ่อนอยู่ในรายละเอียดที่อาจไม่สะดุดตาในทันที แต่ผู้อ่านต้องมองเห็นและสัมผัสตลอดทั้งเล่ม จึงทดสอบตั้งแต่การตัดคำ การจัดย่อหน้า ตำแหน่งสระและวรรณยุกต์ ช่องไฟ เส้นขอบ ความสมมาตรของอินเทอร์เฟซ ปกหนังสือหลายรูปแบบ ไปจนถึงจังหวะการกดปุ่มซ้ำแล้วซ้ำอีกจนลงตัว',
     releaseLabel: 'รุ่นเฟิร์มแวร์',
     releaseTitle: 'รุ่นปัจจุบันและสถานะการเผยแพร่',
-    releaseBody: 'Ekicross มีให้เลือกสองรุ่นสำหรับ XTEINK X3 ได้แก่ 4.0.1 Stable สำหรับผู้ที่ต้องการความเสถียร และ 4.1.2 Update ซึ่งเข้าถึง Gallery ได้รวดเร็วขึ้น เพิ่มหน้าสถิติการอ่านแบบใหม่ ปรับปรุง Dark Mode ให้ดีขึ้น และจัดข้อความเต็มบรรทัดให้เหมาะกับภาษาไทยมากขึ้น',
+    releaseBody: 'Ekicross มีให้เลือกสองรุ่นสำหรับ XTEINK X3 ได้แก่ 4.0.1 Stable และ 4.2.0 Final รุ่นล่าสุดที่เพิ่ม Dark Interface ทั้งระบบ ปรับภาษาไทยและ Reader ครั้งใหญ่ พร้อมยกระดับ Connect ให้ทนต่อการเชื่อมต่อที่ไม่สำเร็จมากขึ้น',
     target: 'รองรับเฉพาะ',
     download: 'ดาวน์โหลดเฟิร์มแวร์',
     fileSize: 'ไฟล์ .bin',
     checksum: 'รหัสตรวจสอบไฟล์',
     renameFile: 'ก่อนใช้งาน โปรดเปลี่ยนชื่อไฟล์เป็น firmware.bin',
+    installReadyFile: 'ไฟล์นี้ใช้ชื่อ firmware.bin และพร้อมวางลงในพื้นที่หลักของ SD Card',
     warningTitle: 'ก่อนติดตั้ง',
-    warning: 'เฟิร์มแวร์นี้ใช้ได้กับ XTEINK X3 เท่านั้น ห้ามติดตั้งบน X4 ก่อนอัปเดตควรสำรองหนังสือและข้อมูลสำคัญ ตรวจสอบว่าแบตเตอรี่มีเพียงพอ และห้ามปิดเครื่องหรือถอด SD Card ระหว่างติดตั้ง',
+    warning: 'เฟิร์มแวร์นี้รองรับเฉพาะ XTEINK X3 และการอัปเดตผ่าน SD Card เท่านั้น ไม่ใช่ X4 และไม่ใช่ไฟล์ Full-flash ก่อนอัปเดตควรสำรองข้อมูล ชาร์จแบตเตอรี่ให้เพียงพอ ตรวจ SHA-256 และห้ามปิดเครื่องหรือถอด SD Card ระหว่างติดตั้ง',
     addonLabel: 'ส่วนเสริมสำหรับ SD Card',
-    addonTitle: 'Ekicross Extension Pack',
+    addonTitle: 'Ekicross 4.2.0 Extension Pack',
     addonBody: 'สำหรับผู้ที่ติดตั้งเฟิร์มแวร์แล้ว แต่โฟลเดอร์สำหรับใช้งานบน SD Card ยังไม่ครบ ภายในมีพจนานุกรมอังกฤษ–ไทย ฟอนต์ Google Sans และ Sarabun พร้อมโครงสร้างโฟลเดอร์ที่จำเป็น',
     addonGuide: 'สำรองข้อมูลเดิมก่อน จากนั้นแตกไฟล์ ZIP แล้วจัดวางโฟลเดอร์ที่มีให้ตรงกับโครงสร้างหลักของ SD Card',
     addonContents: '8 โฟลเดอร์ · พจนานุกรมอังกฤษ–ไทย · ฟอนต์ภาษาไทย 2 ชุด',
@@ -92,16 +93,17 @@ const copy = {
     developmentIntro: 'The care lives in details that may go unnoticed at first but remain visible throughout a book. Thai text, long titles, varied covers, and button flows are tested repeatedly until they settle naturally.',
     releaseLabel: 'FIRMWARE RELEASE',
     releaseTitle: 'Current release and availability',
-    releaseBody: 'Ekicross is distributed in two XTEINK X3 releases: 4.0.1 Stable for a settled experience and 4.1.2 Update with faster Gallery access, a redesigned reading statistics screen, improved Dark Mode, and better full justification for Thai text.',
+    releaseBody: 'Ekicross is available in two releases for the XTEINK X3: 4.0.1 Stable and the latest 4.2.0 Final with a system-wide Dark Interface, major Thai and Reader refinements, and a more resilient Connect core.',
     target: 'Target device',
     download: 'Download firmware',
     fileSize: '.bin file',
     checksum: 'File checksum',
     renameFile: 'Before use, rename the downloaded file to firmware.bin',
+    installReadyFile: 'This file is already named firmware.bin and is ready for the root of the SD card',
     warningTitle: 'Before installing',
-    warning: 'This firmware is only for XTEINK X3, not X4. Back up important books and data, charge the battery, and never power off or remove the SD card during installation.',
+    warning: 'This firmware supports only the XTEINK X3 and SD card updates. It is not for X4 and is not a full-flash image. Back up important data, charge the battery, verify SHA-256, and never power off or remove the SD card during installation.',
     addonLabel: 'SD CARD ADD-ON',
-    addonTitle: 'Ekicross Extension Pack',
+    addonTitle: 'Ekicross 4.2.0 Extension Pack',
     addonBody: 'For firmware users whose SD card folders are incomplete. The pack includes an English–Thai dictionary, Google Sans and Sarabun fonts, and the required folder structure.',
     addonGuide: 'Back up existing data first. Extract the ZIP, then arrange the included folders to match the root structure of your SD card.',
     addonContents: '8 folders · English–Thai dictionary · 2 Thai font families',
@@ -126,7 +128,7 @@ const installationCards = {
       items: [
         {
           title: 'รองรับเฉพาะ XTEINK X3',
-          body: 'ห้ามติดตั้งบนเครื่องรุ่น X4 เฟิร์มแวร์รุ่นนี้ปรับโค้ดให้กระชับและตัดส่วนขยายของ X4 ออก เพื่อให้ขนาดไฟล์เล็กลงและทำงานได้เหมาะสมกับ X3',
+          body: 'ห้ามติดตั้งบน X4 ไฟล์นี้สร้างสำหรับ XTEINK X3 และการอัปเดตผ่าน SD Card เท่านั้น ไม่ใช่ไฟล์ Full-flash',
           details: [],
         },
         {
@@ -234,7 +236,7 @@ const installationCards = {
       title: 'Compatibility and safety systems',
       kind: 'notes',
       items: [
-        { title: 'XTEINK X3 only', body: 'Never install this build on X4. The firmware uses a lean X3-specific build with X4-only extensions removed.', details: [] },
+        { title: 'XTEINK X3 only', body: 'Never install this build on X4. It is made for SD card updates on the XTEINK X3 and is not a full-flash image.', details: [] },
         { title: 'Dual-slot rollback', body: 'The firmware is written to the alternate slot first. If verification or installation fails, the device attempts to return to the previous firmware. This reduces risk but does not guarantee zero chance of a brick.', details: [] },
         { title: 'Manual SD card installation', body: 'OTA capability is intentionally disabled to prevent accidental updates. Install Ekicross manually from an SD card.', details: [] },
       ],
@@ -277,22 +279,42 @@ const installationCards = {
 
 const changelogEntries = [
   {
-    version: '4.1.3',
-    state: 'development',
-    status: { th: 'กำลังพัฒนา · ยังไม่เปิดดาวน์โหลด', en: 'In development · Not yet available' },
-    headline: { th: 'ยกระดับแกน Connect ใหม่ทั้งระบบ', en: 'A system-wide Connect Core upgrade' },
+    version: '4.2.0',
+    state: 'current',
+    status: { th: 'Final · เปิดดาวน์โหลด', en: 'Final · Download available' },
+    headline: { th: 'Dark Interface ใหม่ และยกระดับแกน Connect', en: 'A new Dark Interface and upgraded Connect core' },
     changes: [
       {
-        th: 'สร้างและยกระดับแกน Connect กลางที่ใช้ร่วมกันทั้ง Wi-Fi, Calibre และฟังก์ชันเครือข่ายส่วนอื่นๆ ให้ทำงานเป็นระบบเดียวกันมากขึ้น',
-        en: 'Reworking the shared connection core used by Wi-Fi, Calibre, and other network features into a more consistent system.',
+        th: 'เพิ่ม Dark Interface พื้นดำทั้งระบบพร้อมจำสถานะ โดยแยกอิสระจากโหมดมืดของ Reader และรักษาปกหนังสือกับภาพใน Gallery ไม่ให้กลับขั้ว',
+        en: 'Added a persistent system-wide Dark Interface, separate from Reader Dark Mode, while keeping book covers and Gallery images from being inverted.',
       },
       {
-        th: 'จัดระเบียบการทำงานของ Wi-Fi และ Calibre ให้ใช้แนวทางเดียวกันในการเริ่มเชื่อมต่อ ตรวจสอบสถานะ และจบการทำงาน',
-        en: 'Aligning Wi-Fi and Calibre around the same flow for starting a connection, checking its state, and ending the operation.',
+        th: 'Reader แสดงสถานะโหมดมืดว่าเปิดหรือปิด รักษา FAST page turn และเลือกเปลี่ยน Waveform เฉพาะจังหวะที่จำเป็น',
+        en: 'Reader now shows whether Dark Mode is on or off, preserves FAST page turns, and changes waveform only when needed.',
       },
       {
-        th: 'ปรับการรับมือเมื่อเชื่อมต่อไม่สำเร็จ เพื่อให้หยุดการทำงานได้อย่างเหมาะสม โดยไม่ทำให้ส่วนอื่นของระบบล่มตามไปด้วย',
-        en: 'Improving failed-connection handling so the operation can stop cleanly without bringing down unrelated parts of the system.',
+        th: 'แก้สระอำร่วมวรรณยุกต์ เช่น น้ำ ซ้ำ ย้ำ รวมถึงสระและวรรณยุกต์หลายชั้นบนพยัญชนะไทยทรงสูง',
+        en: 'Fixed tone marks combined with sara am in words such as น้ำ, ซ้ำ, and ย้ำ, plus multi-level marks on tall Thai consonants.',
+      },
+      {
+        th: 'รองรับฟอนต์ทำเองขนาดเกิน 20 pt โดยไม่ปลดระบบ Safety พร้อมปรับการตัดคำไทยสำหรับฟอนต์ใหญ่และใช้มาตรฐาน Reader เดียวกันทั้ง UI ไทยและอังกฤษ',
+        en: 'Supports custom fonts above 20 pt without disabling loader safety, with improved Thai word breaking and one Reader standard across Thai and English UI languages.',
+      },
+      {
+        th: 'ยกระดับแกน Connect สำหรับ Wi-Fi, Web transfer, Calibre/WebDAV, Hotspot และ OPDS ให้จัดการหน่วยความจำและความล้มเหลวได้อย่างปลอดภัยขึ้น',
+        en: 'Upgraded the Connect core across Wi-Fi, Web transfer, Calibre/WebDAV, Hotspot, and OPDS for safer memory and failure handling.',
+      },
+      {
+        th: 'แก้ปุ่ม “เลือก/สลับ” ซ้อนกัน และเพิ่มเวอร์ชันที่ติดตั้งจริงจาก App Descriptor ในหน้า System',
+        en: 'Fixed overlapping Select/Switch labels and added the installed App Descriptor version to the System page.',
+      },
+      {
+        th: 'ปรับความคมของ Reader ให้คงที่หลังเปลี่ยนหน้า และลด Ghost ของภาพพักหน้าจอ X3 ด้วย Quality Refresh ในจังหวะสุดท้าย',
+        en: 'Stabilized Reader sharpness after page turns and reduced X3 sleep-screen ghosting with a final quality refresh.',
+      },
+      {
+        th: 'รักษาฟังก์ชันเดิม ระบบ Dual-Slot, Rollback และการติดตั้งแบบ Fail-closed โดยไม่เขียน Bootloader หรือ Partition Table',
+        en: 'Preserves existing features, dual-slot rollback, and fail-closed installation without writing the bootloader or partition table.',
       },
     ],
   },
@@ -402,13 +424,14 @@ export default function Home() {
           <article className="release-panel update glass">
             <div className="release-top"><span className="status-dot ready" />{currentRelease.status[lang]}</div>
             <h3>Ekicross X3<br />{currentRelease.version}</h3>
+            <ul className="release-highlights">{currentRelease.highlights.map(item => <li key={item.th}>{item[lang]}</li>)}</ul>
             <a className="download-button" href={firmwareDownloads.update.url}>{t.download}<span>↓</span></a>
-            <p className="rename-file-note">{t.renameFile}</p>
+            <p className="rename-file-note ready-file-note">{t.installReadyFile}</p>
             <p className="download-note">{t.fileSize} · {firmwareDownloads.update.size}</p>
             <details className="checksum"><summary>{t.checksum}</summary><code>{firmwareDownloads.update.sha256}</code></details>
           </article>
         </div>
-        <div className="test-grid release-tests">{currentRelease.tests.map(test => <div key={test.value}><strong>{test.value}</strong><span>{test[lang]}</span></div>)}</div>
+        <div className="test-grid release-tests">{currentRelease.tests.map(test => <div key={`${test.value}-${test.th}`}><strong>{test.value}</strong><span>{test[lang]}</span></div>)}</div>
         <aside className="warning glass"><span>!</span><div><h3>{t.warningTitle}</h3><p>{t.warning}</p></div></aside>
         <article className="addon-card glass" aria-labelledby="addon-title">
           <div className="addon-copy">

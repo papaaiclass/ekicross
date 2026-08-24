@@ -1,11 +1,19 @@
 export const currentRelease = {
-  version: '4.1.2 Update',
-  status: { th: 'เปิดดาวน์โหลด', en: 'Download available' },
+  version: '4.2.0 Final',
+  status: { th: 'Final · เปิดดาวน์โหลด', en: 'Final · Download available' },
   target: 'XTEINK X3',
+  highlights: [
+    { th: 'Dark Interface ทั้งระบบ โดยปกหนังสือและภาพ Gallery ไม่กลับขั้ว', en: 'A system-wide Dark Interface without inverting book covers or Gallery images' },
+    { th: 'ปรับภาษาไทย ฟอนต์ขนาดใหญ่ และความคมของ Reader', en: 'Major Thai, large-font, and Reader clarity refinements' },
+    { th: 'ยกระดับแกน Connect สำหรับ Wi-Fi, Web transfer, Calibre/WebDAV, Hotspot และ OPDS', en: 'An upgraded Connect core for Wi-Fi, Web transfer, Calibre/WebDAV, Hotspot, and OPDS' },
+  ],
   tests: [
-    { value: '81/81', th: 'การทดสอบด้วย Python', en: 'Python tests' },
-    { value: '180/180', th: 'การทดสอบด้วย C++', en: 'C++ tests' },
-    { value: 'PASS', th: 'สร้างไฟล์ผ่านโดยไม่มีข้อผิดพลาด', en: 'Clean build' },
+    { value: '94/94', th: 'การทดสอบด้วย Python', en: 'Python tests' },
+    { value: '186/186', th: 'การทดสอบด้วย C++', en: 'C++ tests' },
+    { value: 'PASS', th: 'Cppcheck ไม่พบ defect', en: 'Cppcheck found no defects' },
+    { value: 'PASS', th: 'X3 SD migration build', en: 'X3 SD migration build' },
+    { value: 'PASS', th: 'Release bundle และ ZIP CRC', en: 'Release bundle and ZIP CRC' },
+    { value: 'SAFE', th: 'ไม่เขียน Bootloader หรือ Partition Table', en: 'No bootloader or partition-table writes' },
   ],
 };
 
