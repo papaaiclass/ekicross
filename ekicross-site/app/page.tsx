@@ -181,7 +181,7 @@ const installationCards = {
       items: [
         {
           title: 'ใช้ SD Card สองใบ',
-          body: 'แนวทางนี้เป็นทางเลือกเสริม ผู้ใช้ยังติดตั้งด้วยการ์ดใบเดียวได้ตามขั้นตอนปกติ แต่สำหรับผู้ที่อัปเดตหลายรุ่น การแยกการ์ดข้อมูลออกจากการ์ดติดตั้งจะช่วยลดการย้ายไฟล์ซ้ำ ไม่รบกวนโครงสร้างที่จัดไว้ และกลับมาอ่านต่อได้รวดเร็วหลังอัปเดต',
+          body: 'แนวทางนี้เป็นทางเลือกเสริม ผู้ใช้ยังติดตั้งด้วยการ์ดใบเดียวได้ตามขั้นตอนปกติ แต่สำหรับผู้ที่ติดตามและติดตั้งเฟิร์มแวร์รุ่นใหม่อย่างต่อเนื่อง การแยกการ์ดข้อมูลออกจากการ์ดติดตั้งจะช่วยลดการย้ายไฟล์ซ้ำ ไม่รบกวนโครงสร้างที่จัดไว้ และกลับมาอ่านต่อได้รวดเร็วหลังอัปเดต',
           details: [],
         },
         {
@@ -256,7 +256,7 @@ const installationCards = {
       title: 'Additional installation techniques for a smoother experience',
       kind: 'steps',
       items: [
-        { title: 'Use two SD cards', body: 'This is an optional workflow, and a single card still works with the standard steps. For users who update frequently, separating the data card from the installation card avoids repeated file moves, preserves the prepared structure, and makes it quicker to return to reading after an update.', details: [] },
+        { title: 'Use two SD cards', body: 'This is an optional workflow, and a single card still works with the standard steps. For users who regularly follow and install new firmware releases, separating the data card from the installation card avoids repeated file moves, preserves the prepared structure, and makes it quicker to return to reading after an update.', details: [] },
         { title: 'Power off and remove the everyday card', body: 'Shut the device down completely before removing the SD card that holds your data. Keep this card unchanged while updating.', details: [] },
         { title: 'Prepare the installation card', body: 'Format the second card as exFAT, rename the firmware file to firmware.bin, and place it at the card root as described in the standard installation steps.', highlight: 'Use this card for each firmware installation without placing your everyday books or working folders on it.', details: [] },
         { title: 'Install and wait for a complete restart', body: 'Complete the firmware update through 100%, then wait until the device has restarted and returned to normal operation before continuing.', details: [] },
