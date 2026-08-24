@@ -4,7 +4,7 @@ export const currentRelease = {
   target: 'XTEINK X3',
   highlights: [
     { th: 'New! ขอแนะนำ Dark Interface เต็มระบบ', en: 'New! Introducing a system-wide Dark Interface' },
-    { th: 'แก้ปัญหาฟอนต์คัสตอมขนาดใหญ่', en: 'Fixed issues with large custom fonts' },
+    { th: 'ปรับปรุงภาษาไทย แก้ปัญหาฟอนต์คัสตอมขนาดใหญ่ และความคมชัดของตัวอ่าน', en: 'Improved Thai text, large custom fonts, and Reader clarity' },
     { th: 'ยกระดับแกน Connect สำหรับ Wi-Fi, Web transfer, Calibre/WebDAV, Hotspot และ OPDS', en: 'An upgraded Connect core for Wi-Fi, Web transfer, Calibre/WebDAV, Hotspot, and OPDS' },
   ],
   tests: [
