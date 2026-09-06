@@ -507,6 +507,9 @@ export default function Home() {
             <img src={assetPath('/ekicross-home-ui-cutout.png')} alt="Ekicross Home interface on X3" />
             <figcaption><strong>{t.showcaseBaseTitle}</strong></figcaption>
           </figure>
+          <figure className="showcase-device showcase-reading-theme">
+            <img src={assetPath('/ekicross-reader-dark-theme.png')} alt={lang === 'th' ? 'หน้า Reader ภาษาไทยบน Ekicross X3' : 'Thai Reader screen on Ekicross X3'} />
+          </figure>
           <figure className="showcase-device showcase-new-theme">
             <span className="showcase-new-label">{t.showcaseNewLabel}</span>
             <img src={assetPath('/ekicross-ekihouse-theme-4-3-1.png')} alt={lang === 'th' ? 'ธีม Ekihouse ใหม่บน Ekicross X3' : 'The new Ekihouse theme on Ekicross X3'} />

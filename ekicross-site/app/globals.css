@@ -288,12 +288,9 @@ main[lang='th'] button {
 .device-art { padding: 12px; background: linear-gradient(145deg, rgba(255,255,255,.72), rgba(218,210,255,.48)); }
 .device-art img { width: 100%; max-height: 650px; object-fit: cover; object-position: center; }
 .showcase { position: relative; padding: 80px 0; }
-.showcase-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px; align-items: start; }
-.showcase-device { position: relative; width: min(100%, 530px); margin: 0 auto; }
-.showcase-grid .showcase-device:first-child { width: min(98%, 519px); }
-.showcase-new-theme { width: min(94.1%, 498px); }
-.showcase-device img { display: block; width: 100%; aspect-ratio: 1086 / 1448; height: auto; object-fit: contain; filter: brightness(1.02) contrast(.98) drop-shadow(0 28px 28px rgba(47,51,72,.2)); }
-.showcase-new-theme img { filter: brightness(1.08) contrast(.95) drop-shadow(0 28px 28px rgba(47,51,72,.2)); }
+.showcase-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; align-items: start; }
+.showcase-device { position: relative; width: 100%; margin: 0 auto; }
+.showcase-device img { display: block; width: 100%; aspect-ratio: 1086 / 1448; height: auto; object-fit: contain; filter: brightness(1.05) contrast(.96) drop-shadow(0 28px 28px rgba(47,51,72,.2)); }
 .showcase-new-label { position: absolute; z-index: 1; top: 3%; left: 5%; padding: 7px 11px; border: 1px solid rgba(255,255,255,.78); border-radius: 999px; color: #fff; background: linear-gradient(120deg, #6039cd, #925de3 55%, #54bfe9); box-shadow: 0 10px 22px rgba(89,54,190,.26); font: 700 10px/1.35 var(--font-geist-mono), monospace; letter-spacing: .08em; text-transform: uppercase; }
 .showcase-new-theme figcaption { margin: 14px 2px 0; }
 .showcase-base-theme figcaption { margin: 14px 2px 0; }
@@ -400,6 +397,7 @@ main[lang='th'] button {
 
 @media (max-width: 1000px) {
   .site-header nav { width: 560px; font-size: 12px; }
+  .showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 850px) {
   .showcase-grid { grid-template-columns: 1fr; }
@@ -415,7 +413,6 @@ main[lang='th'] button {
 @media (max-width: 520px) {
   .showcase, .installation, .changelog { padding: 58px 0; }
   .showcase-device { width: min(100%, 430px); }
-  .showcase-new-theme { width: min(94.1%, 405px); }
   .developer-profile { padding: 54px 0 68px; }
   .developer-copy h2 { font-size: 32px; }
   .showcase-grid figure { padding: 8px; border-radius: 23px; }
