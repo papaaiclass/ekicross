@@ -17,7 +17,7 @@ export const currentRelease = {
 };
 
 export const stableRelease = {
-  version: '4.2.0 Final',
+  version: '4.2.0',
   th: 'รุ่นสำรองหลัก · เปิดดาวน์โหลด',
   en: 'Primary fallback · Download available',
 };

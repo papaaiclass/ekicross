@@ -288,21 +288,13 @@ main[lang='th'] button {
 .device-art { padding: 12px; background: linear-gradient(145deg, rgba(255,255,255,.72), rgba(218,210,255,.48)); }
 .device-art img { width: 100%; max-height: 650px; object-fit: cover; object-position: center; }
 .showcase { position: relative; padding: 80px 0; }
-.showcase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
-.showcase-grid figure { margin: 0; padding: 12px; border-radius: 30px; overflow: hidden; }
-.showcase-grid figure:first-child { transform: translateY(34px) rotate(-.7deg); }
-.showcase-grid figure:last-child { transform: rotate(.8deg); }
-.showcase-grid img { display: block; width: 100%; max-height: 720px; object-fit: cover; object-position: top; border-radius: 21px; box-shadow: 0 18px 45px rgba(51,53,69,.17); }
-.showcase-new-theme { position: relative; }
-.showcase-new-theme figcaption { margin: 14px 8px 7px; }
-.showcase-new-theme figcaption span { display: inline-block; margin-bottom: 7px; padding: 5px 9px; border-radius: 999px; color: #5c40bd; background: rgba(220,204,255,.72); font: 700 10px/1.35 var(--font-geist-mono), monospace; letter-spacing: .08em; text-transform: uppercase; }
-.showcase-new-theme figcaption strong { display: block; color: #202842; font-size: 20px; line-height: 1.35; }
-.showcase-new-theme figcaption p { margin: 6px 0 0; color: #59657a; font-size: 14px; line-height: 1.75; }
+.showcase-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px; align-items: end; }
+.showcase-device { position: relative; width: min(100%, 530px); margin: 0 auto; }
+.showcase-device img { display: block; width: 100%; height: auto; filter: drop-shadow(0 28px 28px rgba(47,51,72,.2)); }
+.showcase-new-label { position: absolute; z-index: 1; top: 3%; left: 5%; padding: 7px 11px; border: 1px solid rgba(255,255,255,.78); border-radius: 999px; color: #fff; background: linear-gradient(120deg, #6039cd, #925de3 55%, #54bfe9); box-shadow: 0 10px 22px rgba(89,54,190,.26); font: 700 10px/1.35 var(--font-geist-mono), monospace; letter-spacing: .08em; text-transform: uppercase; }
 .release-art.device-art { overflow: visible; padding: 0; border: 0; background: none; box-shadow: none; transform: none; }
 .release-art.device-art::before { display: none; }
 .release-art.device-art img { max-height: 650px; object-fit: contain; border-radius: 0; box-shadow: none; filter: drop-shadow(0 28px 30px rgba(48,42,68,.2)); }
-.showcase-device { width: min(560px, 78vw); margin: 20px auto 0; }
-.showcase-device img { display: block; width: 100%; height: auto; filter: drop-shadow(0 30px 30px rgba(47,51,72,.19)); }
 .developer-profile { position: relative; display: grid; grid-template-columns: 1fr .78fr; gap: 70px; align-items: center; padding: 74px 0 92px; }
 .developer-copy { max-width: 650px; }
 .developer-copy h2 { margin: 0 0 22px; font-size: clamp(34px,4vw,52px); line-height: 1.24; letter-spacing: -.045em; }
