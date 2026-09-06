@@ -575,7 +575,10 @@ export default function Home() {
             <p className="support-thanks">{t.supportThanks}</p>
           </div>
           <div className="support-qr">
-            <img src={assetPath('/promptpay-qr.jpg')} alt={lang === 'th' ? 'QR Code สำหรับสนับสนุนผู้พัฒนาผ่าน PromptPay' : 'PromptPay QR code to support the developer'} />
+            <div className="support-qr-visual">
+              <img src={assetPath('/promptpay-qr.jpg')} alt={lang === 'th' ? 'QR Code สำหรับสนับสนุนผู้พัฒนาผ่าน PromptPay' : 'PromptPay QR code to support the developer'} />
+              <span className="support-watermark" aria-hidden="true">EKICROSS • SUPPORT</span>
+            </div>
             <strong>{t.supportPromptpay}</strong>
           </div>
         </article>
