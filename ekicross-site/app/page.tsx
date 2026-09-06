@@ -42,6 +42,7 @@ const copy = {
     showcaseTitle: 'Ekicross บนเครื่อง X3',
     showcaseBody: 'หน้าหลักของเฟิร์มแวร์บนเครื่องจริง แสดงการจัดวางภาษาไทย เมนู หนังสือที่อ่านค้างไว้ และการควบคุมด้วยปุ่มของ X3',
     showcaseNewLabel: 'ใหม่ใน 4.3.1',
+    showcaseBaseTitle: 'ธีมหลัก Ekicross',
     showcaseNewTitle: 'ธีมใหม่ Ekihouse',
     showcaseNewBody: 'หน้า Home ใหม่ที่จัดวางการเข้าถึงคลังหนังสือ หนังสือล่าสุด แกลเลอรี การเชื่อมต่อ การตั้งค่า และสถิติการอ่านให้ชัดเจนขึ้น',
     developerLabel: 'ผู้พัฒนาเฟิร์มแวร์',
@@ -89,6 +90,7 @@ const copy = {
     showcaseTitle: 'Ekicross on X3',
     showcaseBody: 'The firmware Home screen on a real device, showing Thai typography, menus, recent books, and physical-button operation on X3.',
     showcaseNewLabel: 'NEW IN 4.3.1',
+    showcaseBaseTitle: 'Ekicross main theme',
     showcaseNewTitle: 'New Ekihouse theme',
     showcaseNewBody: 'A newly organized Home screen that makes Library, Recent, Gallery, Connect, Settings, and reading statistics easier to reach.',
     developerLabel: 'FIRMWARE DEVELOPER',
@@ -501,7 +503,10 @@ export default function Home() {
       <section className="showcase wrap" aria-labelledby="showcase-title">
         <div className="section-heading"><h2 id="showcase-title">{t.showcaseTitle}</h2><p>{t.showcaseBody}</p></div>
         <div className="showcase-grid">
-          <figure className="showcase-device"><img src={assetPath('/ekicross-home-ui-cutout.png')} alt="Ekicross Home interface on X3" /></figure>
+          <figure className="showcase-device showcase-base-theme">
+            <img src={assetPath('/ekicross-home-ui-cutout.png')} alt="Ekicross Home interface on X3" />
+            <figcaption><strong>{t.showcaseBaseTitle}</strong></figcaption>
+          </figure>
           <figure className="showcase-device showcase-new-theme">
             <span className="showcase-new-label">{t.showcaseNewLabel}</span>
             <img src={assetPath('/ekicross-ekihouse-theme-4-3-1.png')} alt={lang === 'th' ? 'ธีม Ekihouse ใหม่บน Ekicross X3' : 'The new Ekihouse theme on Ekicross X3'} />
