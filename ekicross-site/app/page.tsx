@@ -41,6 +41,9 @@ const copy = {
     storyBody2: 'เมื่อพบรายละเอียดเล็กๆ ระหว่างอ่านก็ย้อนกลับไปแก้ ตั้งแต่รูปทรงตัวอักษร ระยะห่าง น้ำหนักหมึก ไปจนถึงจังหวะการกดปุ่ม ทุกส่วนจึงค่อยๆ ลงตัวจากการใช้งานจริงในแต่ละวัน',
     showcaseTitle: 'Ekicross บนเครื่อง X3',
     showcaseBody: 'หน้าหลักของเฟิร์มแวร์บนเครื่องจริง แสดงการจัดวางภาษาไทย เมนู หนังสือที่อ่านค้างไว้ และการควบคุมด้วยปุ่มของ X3',
+    showcaseNewLabel: 'ใหม่ใน 4.3.1',
+    showcaseNewTitle: 'ธีมใหม่ Ekihouse',
+    showcaseNewBody: 'หน้า Home ใหม่ที่จัดวางการเข้าถึงคลังหนังสือ หนังสือล่าสุด แกลเลอรี การเชื่อมต่อ การตั้งค่า และสถิติการอ่านให้ชัดเจนขึ้น',
     developerLabel: 'ผู้พัฒนาเฟิร์มแวร์',
     developerTitle: 'ดูแลทุกส่วน ตั้งแต่ภาษาไทยไปจนถึงประสบการณ์อ่าน',
     developerBody: 'Ekicross พัฒนาจากการใช้งานจริงบนเครื่อง X3 พร้อมปรับรายละเอียดทุกส่วนอย่างต่อเนื่อง เพื่อให้เหมาะกับการอ่านภาษาไทยมากที่สุด',
@@ -85,6 +88,9 @@ const copy = {
     storyBody2: 'Whenever a small issue appeared during reading, it went back for another adjustment: type, spacing, ink weight, and button behavior all improved through daily use.',
     showcaseTitle: 'Ekicross on X3',
     showcaseBody: 'The firmware Home screen on a real device, showing Thai typography, menus, recent books, and physical-button operation on X3.',
+    showcaseNewLabel: 'NEW IN 4.3.1',
+    showcaseNewTitle: 'New Ekihouse theme',
+    showcaseNewBody: 'A newly organized Home screen that makes Library, Recent, Gallery, Connect, Settings, and reading statistics easier to reach.',
     developerLabel: 'FIRMWARE DEVELOPER',
     developerTitle: 'Caring for every detail, from Thai typography to reading flow',
     developerBody: 'Ekicross is developed through real daily use on X3, with each detail refined for a natural Thai reading experience.',
@@ -289,16 +295,12 @@ const changelogEntries = [
         en: 'Added the Ekihouse theme, with menus, icons, labels, highlights, and touch targets organized as one Home-screen system.',
       },
       {
-        th: 'หน้า Home เริ่มต้นโดยยังไม่มีป้ายถูกเลือก ตัวละครและแมวหันหน้าตรง จากนั้นกดปุ่มครั้งแรกเพื่อเริ่มเลือกคลังหนังสือ และกดเลือกอีกครั้งเพื่อเปิดเมนู',
-        en: 'Home opens with no label selected and the characters facing forward. The first input begins Library selection; a second Select opens it.',
-      },
-      {
         th: 'จัดตำแหน่งคลังหนังสือ หนังสือล่าสุด Gallery เชื่อมต่อ การตั้งค่า และสถิติการอ่านให้ชัดเจนและคงตำแหน่งเดิมตลอดการใช้งาน',
         en: 'Placed Library, Recent, Gallery, Connect, Settings, and Reading Statistics in clear, consistent positions.',
       },
       {
-        th: 'ปรับหน้า Home โดยไม่เปลี่ยนธีมอื่น รวมถึงไม่แตะ Reader ฟอนต์ ความคมชัด หรือจังหวะรีเฟรชที่ใช้งานอยู่',
-        en: 'Refined Home without changing other themes, Reader behavior, fonts, contrast, or refresh timing.',
+        th: 'ปรับหน้า Home ให้เป็นธรรมชาติขึ้น พร้อมคงมาตรฐานของธีมเดิม Reader ฟอนต์ ความคมชัด และจังหวะรีเฟรชที่ปรับจูนไว้อย่างต่อเนื่อง',
+        en: 'Refined Home while carrying forward the established standards for themes, Reader behavior, fonts, contrast, and refresh timing.',
       },
       {
         th: 'Extension Pack เพิ่มฟอนต์ Bai Jamjuree และ Mali ร่วมกับ Google Sans และ Sarabun ในขนาด 12, 14, 16 และ 18',
@@ -496,7 +498,16 @@ export default function Home() {
         <div className="story-card glass"><h2>{t.storyTitle}</h2><div><p>{t.storyBody1}</p><p>{t.storyBody2}</p></div></div>
       </section>
 
-      <section className="showcase wrap" aria-labelledby="showcase-title"><div className="section-heading"><h2 id="showcase-title">{t.showcaseTitle}</h2><p>{t.showcaseBody}</p></div><figure className="showcase-device"><img src={assetPath('/ekicross-home-ui-cutout.png')} alt="Ekicross Home interface on X3" /></figure></section>
+      <section className="showcase wrap" aria-labelledby="showcase-title">
+        <div className="section-heading"><h2 id="showcase-title">{t.showcaseTitle}</h2><p>{t.showcaseBody}</p></div>
+        <div className="showcase-grid">
+          <figure className="glass"><img src={assetPath('/ekicross-home-ui-cutout.png')} alt="Ekicross Home interface on X3" /></figure>
+          <figure className="showcase-new-theme glass">
+            <img src={assetPath('/ekicross-ekihouse-theme-4-3-1.png')} alt={lang === 'th' ? 'ธีม Ekihouse ใหม่บน Ekicross X3' : 'The new Ekihouse theme on Ekicross X3'} />
+            <figcaption><span>{t.showcaseNewLabel}</span><strong>{t.showcaseNewTitle}</strong><p>{t.showcaseNewBody}</p></figcaption>
+          </figure>
+        </div>
+      </section>
 
       <section className="developer-profile wrap" id="developer" aria-labelledby="developer-title">
         <div className="developer-copy"><div className="section-kicker"><span>•</span>{t.developerLabel}</div><h2 id="developer-title">{t.developerTitle}</h2><p>{t.developerBody}</p></div>
