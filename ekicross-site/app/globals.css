@@ -302,7 +302,7 @@ main[lang='th'] button {
 .showcase-new-theme figcaption, .showcase-base-theme figcaption { width: 88%; margin: 14px 0 0 12%; }
 .showcase-base-theme figcaption strong { display: block; color: #202842; font-size: 20px; line-height: 1.35; }
 .showcase-new-theme figcaption strong { display: block; color: #202842; font-size: 20px; line-height: 1.35; }
-.showcase-new-theme figcaption p { margin: 6px 0 0; color: #59657a; font-size: 14px; line-height: 1.75; white-space: pre-line; }
+.showcase-new-theme figcaption p { margin: 6px 0 0; color: #59657a; font-size: 14px; line-height: 1.75; }
 .release-art.device-art { overflow: visible; padding: 0; border: 0; background: none; box-shadow: none; transform: none; }
 .release-art.device-art::before { display: none; }
 .release-art.device-art img { max-height: 650px; object-fit: contain; border-radius: 0; box-shadow: none; filter: drop-shadow(0 28px 30px rgba(48,42,68,.2)); }
