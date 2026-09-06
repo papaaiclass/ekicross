@@ -63,6 +63,12 @@ const copy = {
     installReadyFile: 'ไฟล์นี้ใช้ชื่อ firmware.bin และพร้อมวางลงในพื้นที่หลักของ SD Card',
     warningTitle: 'ก่อนติดตั้ง',
     warning: 'เฟิร์มแวร์นี้รองรับเฉพาะ XTEINK X3 และการอัปเดตผ่าน SD Card เท่านั้น ไม่ใช่ X4 และไม่ใช่ไฟล์ Full-flash ก่อนอัปเดตควรสำรองข้อมูล ชาร์จแบตเตอรี่ให้เพียงพอ ตรวจ SHA-256 และห้ามปิดเครื่องหรือถอด SD Card ระหว่างติดตั้ง',
+    supportLabel: 'สนับสนุนผู้พัฒนา',
+    supportTitle: 'ช่วยให้ Ekicross พัฒนาต่อได้',
+    supportBody1: 'เฟิร์มแวร์นี้พัฒนาขึ้นด้วยความตั้งใจให้ทุกคนได้ใช้งานฟรี ไม่มีค่าใช้จ่าย',
+    supportBody3: 'หากเฟิร์มแวร์นี้ทำให้การใช้งานของคุณมีความสุขขึ้น และอยากร่วมเป็นกำลังใจให้ผมพัฒนาฟีเจอร์ใหม่ๆเพิ่มเติม สามารถสแกน QR Code เพื่อสนับสนุนได้ครับ 😊 ทุกการสนับสนุนช่วยเป็นทั้งค่าเลี้ยงกาแฟ ค่าอุปกรณ์ การทดลองฟีเจอร์ใหม่ๆ และค่าขนมเล็กๆน้อยๆให้เด็กๆ ของคุณพ่อลูกสองคนนี้',
+    supportPromptpay: 'PromptPay · 080-791-6441',
+    supportThanks: 'ขอบคุณทุกคนที่ใช้งาน แจ้งบั๊ก รีวิวแนะนำต่อ และช่วยกันทำให้เฟิร์มแวร์นี้ดีขึ้นครับ เป้าหมายเดียวของผมคืออยากให้ทุกคนมีประสบการณ์การอ่านภาษาไทยที่ดีที่สุดเท่าที่อุปกรณ์เครื่องนี้จะทำได้ครับ 🙏',
     addonLabel: 'ส่วนเสริมสำหรับ SD Card',
     addonTitle: 'Ekicross 4.3.1 Extension Pack',
     addonBody: 'สำหรับผู้ที่ติดตั้งเฟิร์มแวร์แล้ว แต่โฟลเดอร์สำหรับใช้งานบน SD Card ยังไม่ครบ ภายในมีพจนานุกรมอังกฤษ–ไทย ฟอนต์ Google Sans, Sarabun, Bai Jamjuree และ Mali พร้อมโครงสร้างโฟลเดอร์ที่จำเป็น',
@@ -112,6 +118,12 @@ const copy = {
     installReadyFile: 'This file is already named firmware.bin and is ready for the root of the SD card',
     warningTitle: 'Before installing',
     warning: 'This firmware supports only the XTEINK X3 and SD card updates. It is not for X4 and is not a full-flash image. Back up important data, charge the battery, verify SHA-256, and never power off or remove the SD card during installation.',
+    supportLabel: 'SUPPORT THE DEVELOPER',
+    supportTitle: 'Help Ekicross keep improving',
+    supportBody1: 'This firmware is made with care and shared freely for everyone to use at no cost.',
+    supportBody3: 'If Ekicross makes your device more enjoyable and you would like to show your support, you can contribute here 😊 Every contribution helps with coffee, equipment, feature testing, and small treats for a family with two children.',
+    supportPromptpay: 'PromptPay · 080-791-6441',
+    supportThanks: 'Thank you for using Ekicross, reporting bugs, sharing it with others, and helping make the firmware better.',
     addonLabel: 'SD CARD ADD-ON',
     addonTitle: 'Ekicross 4.3.1 Extension Pack',
     addonBody: 'For firmware users whose SD card folders are incomplete. The pack includes an English–Thai dictionary, Google Sans, Sarabun, Bai Jamjuree, and Mali fonts, plus the required folder structure.',
@@ -554,6 +566,19 @@ export default function Home() {
             <details className="checksum"><summary>{t.checksum}</summary><code>{firmwareDownloads.update.sha256}</code></details>
           </article>
         </div>
+        <article className="support-card glass" aria-labelledby="support-title">
+          <div className="support-copy">
+            <span className="support-label">{t.supportLabel}</span>
+            <h3 id="support-title">{t.supportTitle}</h3>
+            <p>{t.supportBody1}</p>
+            <p>{t.supportBody3}</p>
+            <p className="support-thanks">{t.supportThanks}</p>
+          </div>
+          <div className="support-qr">
+            <img src={assetPath('/promptpay-qr.jpg')} alt={lang === 'th' ? 'QR Code สำหรับสนับสนุนผู้พัฒนาผ่าน PromptPay' : 'PromptPay QR code to support the developer'} />
+            <strong>{t.supportPromptpay}</strong>
+          </div>
+        </article>
         <div className="test-grid release-tests">{currentRelease.tests.map(test => <div key={`${test.value}-${test.th}`}><strong>{test.value}</strong><span>{test[lang]}</span></div>)}</div>
         <aside className="warning glass"><span>!</span><div><h3>{t.warningTitle}</h3><p>{t.warning}</p></div></aside>
         <article className="addon-card glass" aria-labelledby="addon-title">

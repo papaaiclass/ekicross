@@ -50,10 +50,12 @@ main { position: relative; min-height: 100vh; overflow: hidden; }
 .language button { border: 0; padding: 8px 10px; border-radius: 9px; color: #70788a; background: transparent; cursor: pointer; font: 700 10px/1 var(--font-geist-mono), monospace; }
 .language button.active { color: white; background: linear-gradient(135deg, #3a80ff, #1a59d4); box-shadow: 0 5px 14px rgba(36,107,253,.28); }
 
-.hero { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; min-height: 710px; padding: 84px 0 92px; }
+.hero { position: relative; display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: 56px; align-items: center; min-height: 710px; padding: 84px 0 92px; }
+.hero-copy { min-width: 0; }
 .eyebrow { margin: 0; color: var(--blue); font: 700 11px/1.4 var(--font-geist-mono), monospace; letter-spacing: .12em; }
 .hero h1 { margin: 25px 0 28px; font-size: clamp(48px, 5vw, 68px); line-height: 1.1; letter-spacing: -.055em; font-weight: 800; }
 .hero h1 span { display: block; white-space: nowrap; }
+main[lang='en'] .hero h1 span { white-space: normal; }
 .lead { max-width: 660px; margin: 0; font-size: 18px; line-height: 1.85; color: #4d586f; }
 .hero-actions { display: flex; align-items: center; gap: 28px; margin-top: 36px; }
 .primary-button { min-width: 210px; padding: 15px 18px; border-radius: 15px; color: #fff; background: linear-gradient(135deg, #3a80ff, #1856d2); box-shadow: 0 12px 25px rgba(36,107,253,.25); display: flex; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 700; }
@@ -319,6 +321,15 @@ main[lang='th'] button {
 .two-releases .release-panel.update>* { position: relative; z-index: 1; }
 .two-releases .release-panel.update .download-button { border-color: rgba(255,255,255,.9); color: #fff; background: linear-gradient(120deg, #5e39ca, #8f5fe3 48%, #51bce8); box-shadow: 0 15px 32px rgba(89,54,190,.34); }
 .two-releases .release-panel h3 { flex: 1; }
+.support-card { display: grid; grid-template-columns: minmax(0,1.35fr) minmax(230px,.65fr); gap: 34px; align-items: center; margin-top: 18px; padding: 32px; border: 1px solid rgba(255,255,255,.9); border-radius: 28px; background: radial-gradient(circle at 92% 16%, rgba(180,151,255,.42), transparent 34%), radial-gradient(circle at 8% 88%, rgba(145,225,210,.28), transparent 38%), linear-gradient(135deg, rgba(255,255,255,.82), rgba(235,226,255,.64) 55%, rgba(224,244,241,.62)); box-shadow: 0 24px 58px rgba(89,73,150,.16), inset 0 1px 0 rgba(255,255,255,.94); }
+.support-copy { max-width: 700px; }
+.support-label { display: block; margin-bottom: 12px; color: #6547c7; font: 700 10px/1.4 var(--font-geist-mono), monospace; letter-spacing: .1em; text-transform: uppercase; }
+.support-copy h3 { margin: 0 0 14px; color: #252d44; font-size: clamp(27px,3.2vw,40px); line-height: 1.22; letter-spacing: -.04em; }
+.support-copy p { margin: 0 0 11px; color: #566177; font-size: 14px; line-height: 1.85; }
+.support-copy .support-thanks { margin-top: 16px; color: #4a4164; font-weight: 650; }
+.support-qr { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 20px; border: 1px solid rgba(255,255,255,.92); border-radius: 22px; background: rgba(255,255,255,.58); box-shadow: 0 15px 34px rgba(77,65,126,.13); }
+.support-qr img { display: block; width: min(230px, 100%); height: auto; border-radius: 14px; background: #fff; box-shadow: 0 8px 20px rgba(42,42,56,.12); }
+.support-qr strong { color: #4f416f; font-size: 14px; line-height: 1.4; text-align: center; }
 .release-highlights { display: grid; gap: 8px; margin: -12px 0 22px; padding: 0; list-style: none; }
 .release-highlights li { position: relative; padding-left: 18px; color: #59657a; font-size: 12px; line-height: 1.65; }
 .release-highlights li::before { content: ''; position: absolute; top: 7px; left: 2px; width: 7px; height: 7px; border-radius: 50%; background: linear-gradient(135deg,#7259dd,#5dbce8); box-shadow: 0 0 0 4px rgba(111,88,218,.1); }
@@ -409,6 +420,9 @@ main[lang='th'] button {
   .showcase-grid { grid-template-columns: 1fr; }
   .showcase-grid figure:first-child, .showcase-grid figure:last-child { transform: none; }
   .two-releases { grid-template-columns: 1fr; }
+  .support-card { grid-template-columns: 1fr; }
+  .support-copy { max-width: none; }
+  .support-qr { width: min(300px, 100%); justify-self: center; }
   .addon-card { grid-template-columns: 1fr; }
   .installation-heading, .installation-grid { grid-template-columns: 1fr; gap: 24px; }
   .changelog-card { grid-template-columns: 1fr; gap: 20px; }
@@ -427,6 +441,7 @@ main[lang='th'] button {
   .release-tests div { border-right: 0; border-bottom: 1px solid rgba(94,105,133,.15); padding: 12px 0; }
   .release-tests div:last-child { border-bottom: 0; }
   .addon-card { padding: 24px 20px; border-radius: 24px; }
+  .support-card { padding: 24px 20px; border-radius: 24px; }
   .addon-download { padding: 18px; }
   .installation-heading h2 { font-size: 32px; }
   .changelog-heading h2 { font-size: 32px; }
