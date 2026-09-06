@@ -44,7 +44,7 @@ const copy = {
     showcaseNewLabel: 'ใหม่ใน 4.3.1',
     showcaseBaseTitle: 'ธีมหลัก Ekicross',
     showcaseNewTitle: 'ธีมใหม่ Ekihouse',
-    showcaseNewBody: 'หน้า Home ใหม่สำหรับสาย Retro ที่หยิบกลิ่นอายเกม RPG ยุคคลาสสิกมาทำใหม่ในสไตล์ของ Ekicross มาพร้อมฉาก Pixel Art และ Animation เล็กๆ สุดน่ารัก และ UI ที่ตั้งใจออกแบบขึ้นมาเป็นพิเศษ',
+    showcaseNewBody: 'หน้า Home ใหม่สำหรับสาย Retro ที่หยิบกลิ่นอายเกม RPG ยุค\nคลาสสิกมาทำใหม่ในสไตล์ของ Ekicross มาพร้อมฉาก Pixel Art และ Animation เล็กๆ สุดน่ารัก และ UI ที่ตั้งใจออกแบบขึ้นมาเป็นพิเศษ',
     developerLabel: 'ผู้พัฒนาเฟิร์มแวร์',
     developerTitle: 'ดูแลทุกส่วน ตั้งแต่ภาษาไทยไปจนถึงประสบการณ์การอ่าน',
     developerBody: 'Ekicross พัฒนาจากการใช้งานจริงบนเครื่อง X3 พร้อมปรับรายละเอียดทุกส่วนอย่างต่อเนื่อง เพื่อให้เหมาะกับการอ่านภาษาไทยมากที่สุด',
