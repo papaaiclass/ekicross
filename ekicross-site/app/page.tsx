@@ -301,8 +301,8 @@ const changelogEntries = [
         en: 'Placed Library, Recent, Gallery, Connect, Settings, and Reading Statistics in clear, consistent positions.',
       },
       {
-        th: 'ปรับหน้า Home ให้เป็นธรรมชาติขึ้น พร้อมคงมาตรฐานของธีมเดิม Reader ฟอนต์ ความคมชัด และจังหวะรีเฟรชที่ปรับจูนไว้อย่างต่อเนื่อง',
-        en: 'Refined Home while carrying forward the established standards for themes, Reader behavior, fonts, contrast, and refresh timing.',
+        th: 'ยกระดับหน้า Home ให้เป็นธรรมชาติขึ้น พร้อมคงมาตรฐานของธีมเดิม Reader ฟอนต์ ความคมชัด และจังหวะรีเฟรชที่ปรับจูนไว้อย่างต่อเนื่อง',
+        en: 'Elevated Home while carrying forward the established standards for themes, Reader behavior, fonts, contrast, and refresh timing.',
       },
       {
         th: 'Extension Pack เพิ่มฟอนต์ Bai Jamjuree และ Mali ร่วมกับ Google Sans และ Sarabun ในขนาด 12, 14, 16 และ 18',
