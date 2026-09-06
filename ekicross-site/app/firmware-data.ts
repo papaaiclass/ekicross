@@ -1,26 +1,25 @@
 export const currentRelease = {
-  version: '4.2.0 Final',
+  version: '4.3.1 Final',
   status: { th: 'Final · เปิดดาวน์โหลด', en: 'Final · Download available' },
   target: 'XTEINK X3',
   highlights: [
-    { th: 'New! ขอแนะนำ Dark Interface เต็มระบบ', en: 'New! Introducing a system-wide Dark Interface' },
-    { th: 'ปรับปรุงภาษาไทย แก้ปัญหาฟอนต์คัสตอมขนาดใหญ่ และความคมชัดของตัวอ่าน', en: 'Improved Thai text, large custom fonts, and Reader clarity' },
-    { th: 'ยกระดับแกน Connect สำหรับ Wi-Fi, Web transfer, Calibre/WebDAV, Hotspot และ OPDS', en: 'An upgraded Connect core for Wi-Fi, Web transfer, Calibre/WebDAV, Hotspot, and OPDS' },
+    { th: 'ธีมใหม่ Ekihouse พร้อมหน้า Home ที่เริ่มต้นอย่างเรียบและชัดเจน', en: 'The new Ekihouse theme with a calm, clear Home starting state' },
+    { th: 'ตำแหน่งเมนู ป้าย ไฮไลต์ และการควบคุมด้วยปุ่มจัดวางอย่างเป็นระบบ', en: 'Menu positions, highlights, and physical-button controls are organized consistently' },
+    { th: 'เพิ่มฟอนต์ Bai Jamjuree และ Mali ใน Extension Pack', en: 'Bai Jamjuree and Mali are now included in the Extension Pack' },
   ],
   tests: [
-    { value: '94/94', th: 'การทดสอบด้วย Python', en: 'Python tests' },
-    { value: '186/186', th: 'การทดสอบด้วย C++', en: 'C++ tests' },
-    { value: 'PASS', th: 'Cppcheck ไม่พบ defect', en: 'Cppcheck found no defects' },
-    { value: 'PASS', th: 'X3 SD migration build', en: 'X3 SD migration build' },
+    { value: '120/120', th: 'การทดสอบด้วย Python', en: 'Python tests' },
+    { value: '192/192', th: 'การทดสอบด้วย C++', en: 'C++ tests' },
+    { value: 'PASS', th: 'ตรวจ Firmware image, checksum และ OTA', en: 'Firmware image, checksum, and OTA validation' },
     { value: 'PASS', th: 'Release bundle และ ZIP CRC', en: 'Release bundle and ZIP CRC' },
     { value: 'SAFE', th: 'ไม่เขียน Bootloader หรือ Partition Table', en: 'No bootloader or partition-table writes' },
   ],
 };
 
 export const stableRelease = {
-  version: '4.0.1 Stable',
-  th: 'เปิดดาวน์โหลด',
-  en: 'Download available',
+  version: '4.2.0 Final',
+  th: 'รุ่นสำรองหลัก · เปิดดาวน์โหลด',
+  en: 'Primary fallback · Download available',
 };
 
 export const development = [

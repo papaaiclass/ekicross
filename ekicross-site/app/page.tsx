@@ -7,22 +7,22 @@ type Lang = 'th' | 'en';
 
 const firmwareDownloads = {
   stable: {
-    url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.0.1/Ekicross-X3-4.0.1-Stable.bin',
-    size: '6.21 MB',
-    sha256: '2e63729e89467f0aa0a2ff5186af59441e990de437d118eff0769087cdfdcfbd',
-  },
-  update: {
     url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.2.0/firmware.bin',
     size: '6.22 MB',
     sha256: '06cd360abe0ecbdfc6ef1578ac7d4d37b13676b6e247af9f1c0b412efabf79d0',
   },
+  update: {
+    url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.3.1/firmware.bin',
+    size: '6.29 MB',
+    sha256: '833fd6e85035e39e7f02a07af74220666e374dc4d8610724f34f6856c9959b8e',
+  },
 };
 
 const extensionPack = {
-  url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.2.0/Ekicross-X3-4.2.0-SD-Addon.zip',
-  checksumUrl: 'https://github.com/papaaiclass/ekicross/releases/download/v4.2.0/Ekicross-X3-4.2.0-SD-Addon.zip.sha256',
-  size: '3.89 MB',
-  sha256: '863d4e0da052d60bfdd9952a237b1571f07f4346826468788708dd6298a86313',
+  url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.3.1/Ekicross-X3-4.3.1-SD-Addon.zip',
+  checksumUrl: 'https://github.com/papaaiclass/ekicross/releases/download/v4.3.1/Ekicross-X3-4.3.1-SD-Addon.zip.sha256',
+  size: '4.87 MB',
+  sha256: '21f5f1bf46a8bf1cbcc0c7b1262ed5d5ae7ee95318f4386fef81c36e2c323caa',
   folders: ['dictionaries', 'Notes', 'screenshots', 'sleep', 'books', 'fonts', 'Articles', 'Gallery'],
 };
 
@@ -49,7 +49,7 @@ const copy = {
     developmentIntro: 'ความพิถีพิถันซ่อนอยู่ในรายละเอียดที่อาจไม่สะดุดตาในทันที แต่ผู้อ่านต้องมองเห็นและสัมผัสตลอดทั้งเล่ม จึงทดสอบตั้งแต่การตัดคำ การจัดย่อหน้า ตำแหน่งสระและวรรณยุกต์ ช่องไฟ เส้นขอบ ความสมมาตรของอินเทอร์เฟซ ปกหนังสือหลายรูปแบบ ไปจนถึงจังหวะการกดปุ่มซ้ำแล้วซ้ำอีกจนลงตัว',
     releaseLabel: 'รุ่นเฟิร์มแวร์',
     releaseTitle: 'รุ่นปัจจุบันและสถานะการเผยแพร่',
-    releaseBody: 'Ekicross มีให้เลือกสองรุ่นสำหรับ XTEINK X3 ได้แก่ 4.0.1 Stable และ 4.2.0 Final รุ่นล่าสุดที่เพิ่ม Dark Interface ทั้งระบบ ปรับภาษาไทยและ Reader ครั้งใหญ่ พร้อมยกระดับแกนระบบ Connect ใหม่ทั้งหมด',
+    releaseBody: 'Ekicross มีให้เลือกสองรุ่นสำหรับ XTEINK X3 ได้แก่ 4.2.0 Final ซึ่งเป็นรุ่นสำรองหลัก และ 4.3.1 Final รุ่นล่าสุดที่มาพร้อมธีม Ekihouse และการจัดหน้า Home ใหม่',
     target: 'รองรับเฉพาะ',
     download: 'ดาวน์โหลดเฟิร์มแวร์',
     fileSize: 'ไฟล์ .bin',
@@ -59,10 +59,10 @@ const copy = {
     warningTitle: 'ก่อนติดตั้ง',
     warning: 'เฟิร์มแวร์นี้รองรับเฉพาะ XTEINK X3 และการอัปเดตผ่าน SD Card เท่านั้น ไม่ใช่ X4 และไม่ใช่ไฟล์ Full-flash ก่อนอัปเดตควรสำรองข้อมูล ชาร์จแบตเตอรี่ให้เพียงพอ ตรวจ SHA-256 และห้ามปิดเครื่องหรือถอด SD Card ระหว่างติดตั้ง',
     addonLabel: 'ส่วนเสริมสำหรับ SD Card',
-    addonTitle: 'Ekicross 4.2.0 Extension Pack',
-    addonBody: 'สำหรับผู้ที่ติดตั้งเฟิร์มแวร์แล้ว แต่โฟลเดอร์สำหรับใช้งานบน SD Card ยังไม่ครบ ภายในมีพจนานุกรมอังกฤษ–ไทย ฟอนต์ Google Sans และ Sarabun พร้อมโครงสร้างโฟลเดอร์ที่จำเป็น',
+    addonTitle: 'Ekicross 4.3.1 Extension Pack',
+    addonBody: 'สำหรับผู้ที่ติดตั้งเฟิร์มแวร์แล้ว แต่โฟลเดอร์สำหรับใช้งานบน SD Card ยังไม่ครบ ภายในมีพจนานุกรมอังกฤษ–ไทย ฟอนต์ Google Sans, Sarabun, Bai Jamjuree และ Mali พร้อมโครงสร้างโฟลเดอร์ที่จำเป็น',
     addonGuide: 'สำรองข้อมูลเดิมก่อน จากนั้นแตกไฟล์ ZIP แล้วจัดวางโฟลเดอร์ที่มีให้ตรงกับโครงสร้างหลักของ SD Card',
-    addonContents: '8 โฟลเดอร์ · พจนานุกรมอังกฤษ–ไทย · ฟอนต์ภาษาไทย 2 ชุด',
+    addonContents: '8 โฟลเดอร์ · พจนานุกรมอังกฤษ–ไทย · ฟอนต์ภาษาไทย 4 ชุด',
     addonDownload: 'ดาวน์โหลด Extension Pack',
     addonChecksum: 'ดาวน์โหลดไฟล์ SHA-256',
     installLabel: 'การติดตั้ง',
@@ -93,7 +93,7 @@ const copy = {
     developmentIntro: 'The care lives in details that may go unnoticed at first but remain visible throughout a book. Thai text, long titles, varied covers, and button flows are tested repeatedly until they settle naturally.',
     releaseLabel: 'FIRMWARE RELEASE',
     releaseTitle: 'Current release and availability',
-    releaseBody: 'Ekicross is available in two releases for the XTEINK X3: 4.0.1 Stable and the latest 4.2.0 Final with a system-wide Dark Interface, major Thai and Reader refinements, and a more resilient Connect core.',
+    releaseBody: 'Ekicross is available in two releases for the XTEINK X3: 4.2.0 Final as the primary fallback, and the latest 4.3.1 Final with the Ekihouse theme and a newly organized Home screen.',
     target: 'Target device',
     download: 'Download firmware',
     fileSize: '.bin file',
@@ -103,10 +103,10 @@ const copy = {
     warningTitle: 'Before installing',
     warning: 'This firmware supports only the XTEINK X3 and SD card updates. It is not for X4 and is not a full-flash image. Back up important data, charge the battery, verify SHA-256, and never power off or remove the SD card during installation.',
     addonLabel: 'SD CARD ADD-ON',
-    addonTitle: 'Ekicross 4.2.0 Extension Pack',
-    addonBody: 'For firmware users whose SD card folders are incomplete. The pack includes an English–Thai dictionary, Google Sans and Sarabun fonts, and the required folder structure.',
+    addonTitle: 'Ekicross 4.3.1 Extension Pack',
+    addonBody: 'For firmware users whose SD card folders are incomplete. The pack includes an English–Thai dictionary, Google Sans, Sarabun, Bai Jamjuree, and Mali fonts, plus the required folder structure.',
     addonGuide: 'Back up existing data first. Extract the ZIP, then arrange the included folders to match the root structure of your SD card.',
-    addonContents: '8 folders · English–Thai dictionary · 2 Thai font families',
+    addonContents: '8 folders · English–Thai dictionary · 4 Thai font families',
     addonDownload: 'Download Extension Pack',
     addonChecksum: 'Download SHA-256 file',
     installLabel: 'INSTALLATION',
@@ -279,9 +279,37 @@ const installationCards = {
 
 const changelogEntries = [
   {
-    version: '4.2.0',
+    version: '4.3.1',
     state: 'current',
     status: { th: 'Final · เปิดดาวน์โหลด', en: 'Final · Download available' },
+    headline: { th: 'ธีมใหม่ Ekihouse และหน้า Home ที่เป็นธรรมชาติขึ้น', en: 'The new Ekihouse theme and a more natural Home screen' },
+    changes: [
+      {
+        th: 'เพิ่มธีม Ekihouse พร้อมการจัดวางเมนู ไอคอน ป้าย ไฮไลต์ และพื้นที่กดให้เป็นระบบเดียวกันบนหน้า Home',
+        en: 'Added the Ekihouse theme, with menus, icons, labels, highlights, and touch targets organized as one Home-screen system.',
+      },
+      {
+        th: 'หน้า Home เริ่มต้นโดยยังไม่มีป้ายถูกเลือก ตัวละครและแมวหันหน้าตรง จากนั้นกดปุ่มครั้งแรกเพื่อเริ่มเลือกคลังหนังสือ และกดเลือกอีกครั้งเพื่อเปิดเมนู',
+        en: 'Home opens with no label selected and the characters facing forward. The first input begins Library selection; a second Select opens it.',
+      },
+      {
+        th: 'จัดตำแหน่งคลังหนังสือ หนังสือล่าสุด Gallery เชื่อมต่อ การตั้งค่า และสถิติการอ่านให้ชัดเจนและคงตำแหน่งเดิมตลอดการใช้งาน',
+        en: 'Placed Library, Recent, Gallery, Connect, Settings, and Reading Statistics in clear, consistent positions.',
+      },
+      {
+        th: 'ปรับหน้า Home โดยไม่เปลี่ยนธีมอื่น รวมถึงไม่แตะ Reader ฟอนต์ ความคมชัด หรือจังหวะรีเฟรชที่ใช้งานอยู่',
+        en: 'Refined Home without changing other themes, Reader behavior, fonts, contrast, or refresh timing.',
+      },
+      {
+        th: 'Extension Pack เพิ่มฟอนต์ Bai Jamjuree และ Mali ร่วมกับ Google Sans และ Sarabun ในขนาด 12, 14, 16 และ 18',
+        en: 'The Extension Pack adds Bai Jamjuree and Mali alongside Google Sans and Sarabun in 12, 14, 16, and 18 pt sizes.',
+      },
+    ],
+  },
+  {
+    version: '4.2.0',
+    state: 'fallback',
+    status: { th: 'รุ่นสำรองหลัก · เปิดดาวน์โหลด', en: 'Primary fallback · Download available' },
     headline: { th: 'Dark Interface ใหม่ และยกระดับแกน Connect', en: 'A new Dark Interface and upgraded Connect core' },
     changes: [
       {
@@ -489,7 +517,7 @@ export default function Home() {
             <div className="release-top"><span className="status-dot ready" />{stableRelease[lang]}</div>
             <h3>Ekicross X3<br />{stableRelease.version}</h3>
             <a className="download-button" href={firmwareDownloads.stable.url}>{t.download}<span>↓</span></a>
-            <p className="rename-file-note">{t.renameFile}</p>
+            <p className="rename-file-note ready-file-note">{t.installReadyFile}</p>
             <p className="download-note">{t.fileSize} · {firmwareDownloads.stable.size}</p>
             <details className="checksum"><summary>{t.checksum}</summary><code>{firmwareDownloads.stable.sha256}</code></details>
           </article>
