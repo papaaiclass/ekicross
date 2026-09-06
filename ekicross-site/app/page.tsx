@@ -43,6 +43,7 @@ const copy = {
     showcaseBody: 'หน้าหลักของเฟิร์มแวร์บนเครื่องจริง แสดงการจัดวางภาษาไทย เมนู หนังสือที่อ่านค้างไว้ และการควบคุมด้วยปุ่มของ X3',
     showcaseNewLabel: 'ใหม่ใน 4.3.1',
     showcaseBaseTitle: 'ธีมหลัก Ekicross',
+    showcaseReadingTitle: 'Dark Mode',
     showcaseNewTitle: 'ธีมใหม่ Ekihouse',
     showcaseNewBody: 'หน้า Home ใหม่สำหรับสาย Retro ที่หยิบกลิ่นอายเกม RPG ยุคคลาสสิก มาทำใหม่ในสไตล์ของ Ekicross มาพร้อมฉาก Pixel Art และ Animation เล็กๆ สุดน่ารัก และ UI ที่ตั้งใจออกแบบขึ้นมาเป็นพิเศษ',
     developerLabel: 'ผู้พัฒนาเฟิร์มแวร์',
@@ -91,6 +92,7 @@ const copy = {
     showcaseBody: 'The firmware Home screen on a real device, showing Thai typography, menus, recent books, and physical-button operation on X3.',
     showcaseNewLabel: 'NEW IN 4.3.1',
     showcaseBaseTitle: 'Ekicross main theme',
+    showcaseReadingTitle: 'Dark Mode',
     showcaseNewTitle: 'New Ekihouse theme',
     showcaseNewBody: 'A new Home screen for retro fans, reimagining the spirit of classic-era RPGs in Ekicross style, with a Pixel Art scene, cute little animations, and a specially designed UI.',
     developerLabel: 'FIRMWARE DEVELOPER',
@@ -507,13 +509,14 @@ export default function Home() {
             <img src={assetPath('/ekicross-home-ui-cutout.png')} alt="Ekicross Home interface on X3" />
             <figcaption><strong>{t.showcaseBaseTitle}</strong></figcaption>
           </figure>
-          <figure className="showcase-device showcase-reading-theme">
-            <img src={assetPath('/ekicross-reader-dark-theme.png')} alt={lang === 'th' ? 'หน้า Reader ภาษาไทยบน Ekicross X3' : 'Thai Reader screen on Ekicross X3'} />
-          </figure>
           <figure className="showcase-device showcase-new-theme">
             <span className="showcase-new-label">{t.showcaseNewLabel}</span>
             <img src={assetPath('/ekicross-ekihouse-theme-4-3-1.png')} alt={lang === 'th' ? 'ธีม Ekihouse ใหม่บน Ekicross X3' : 'The new Ekihouse theme on Ekicross X3'} />
             <figcaption><strong>{t.showcaseNewTitle}</strong><p>{t.showcaseNewBody}</p></figcaption>
+          </figure>
+          <figure className="showcase-device showcase-reading-theme">
+            <img src={assetPath('/ekicross-reader-dark-theme.png')} alt={lang === 'th' ? 'หน้า Reader ภาษาไทยบน Ekicross X3' : 'Thai Reader screen on Ekicross X3'} />
+            <figcaption><strong>{t.showcaseReadingTitle}</strong></figcaption>
           </figure>
         </div>
       </section>
