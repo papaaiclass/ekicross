@@ -42,6 +42,8 @@ const copy = {
     showcaseTitle: 'Ekicross บนเครื่อง X3',
     showcaseBody: 'หน้าหลักของเฟิร์มแวร์บนเครื่องจริง แสดงการจัดวางภาษาไทย เมนู หนังสือที่อ่านค้างไว้ และการควบคุมด้วยปุ่มของ X3',
     showcaseNewLabel: 'ใหม่ใน 4.3.1',
+    showcaseNewTitle: 'ธีมใหม่ Ekihouse',
+    showcaseNewBody: 'หน้า Home ใหม่ที่จัดวางการเข้าถึงคลังหนังสือ หนังสือล่าสุด แกลเลอรี การเชื่อมต่อ การตั้งค่า และสถิติการอ่านให้ชัดเจนขึ้น',
     developerLabel: 'ผู้พัฒนาเฟิร์มแวร์',
     developerTitle: 'ดูแลทุกส่วน ตั้งแต่ภาษาไทยไปจนถึงประสบการณ์อ่าน',
     developerBody: 'Ekicross พัฒนาจากการใช้งานจริงบนเครื่อง X3 พร้อมปรับรายละเอียดทุกส่วนอย่างต่อเนื่อง เพื่อให้เหมาะกับการอ่านภาษาไทยมากที่สุด',
@@ -87,6 +89,8 @@ const copy = {
     showcaseTitle: 'Ekicross on X3',
     showcaseBody: 'The firmware Home screen on a real device, showing Thai typography, menus, recent books, and physical-button operation on X3.',
     showcaseNewLabel: 'NEW IN 4.3.1',
+    showcaseNewTitle: 'New Ekihouse theme',
+    showcaseNewBody: 'A newly organized Home screen that makes Library, Recent, Gallery, Connect, Settings, and reading statistics easier to reach.',
     developerLabel: 'FIRMWARE DEVELOPER',
     developerTitle: 'Caring for every detail, from Thai typography to reading flow',
     developerBody: 'Ekicross is developed through real daily use on X3, with each detail refined for a natural Thai reading experience.',
@@ -501,6 +505,7 @@ export default function Home() {
           <figure className="showcase-device showcase-new-theme">
             <span className="showcase-new-label">{t.showcaseNewLabel}</span>
             <img src={assetPath('/ekicross-ekihouse-theme-4-3-1.png')} alt={lang === 'th' ? 'ธีม Ekihouse ใหม่บน Ekicross X3' : 'The new Ekihouse theme on Ekicross X3'} />
+            <figcaption><strong>{t.showcaseNewTitle}</strong><p>{t.showcaseNewBody}</p></figcaption>
           </figure>
         </div>
       </section>
