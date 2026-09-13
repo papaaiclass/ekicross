@@ -385,6 +385,7 @@ main[lang='th'] button {
 .changelog { position: relative; padding: 80px 0 96px; }
 .changelog-heading { margin-bottom: 36px; }
 .changelog-heading h2 { margin: 0; font-size: clamp(34px,4vw,52px); line-height: 1.25; letter-spacing: -.045em; }
+.changelog-heading p { max-width: 760px; margin: 14px 0 0; color: #687287; font-size: 14px; line-height: 1.8; }
 .changelog-list { display: grid; gap: 18px; }
 .changelog-card { display: grid; grid-template-columns: 245px 1fr; gap: 40px; padding: 32px; border-radius: 28px; background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(227,222,255,.5) 48%, rgba(216,242,255,.5)); }
 .changelog-current { position: relative; overflow: hidden; border: 1px solid rgba(135,97,241,.42); background: radial-gradient(circle at 92% 12%, rgba(119,210,255,.6), transparent 29%), radial-gradient(circle at 9% 92%, rgba(238,126,209,.35), transparent 31%), linear-gradient(135deg, rgba(255,255,255,.91), rgba(226,213,255,.84) 48%, rgba(207,239,255,.76)); box-shadow: 0 26px 62px rgba(91,62,187,.26), inset 0 1px 0 rgba(255,255,255,.96); }
