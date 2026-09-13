@@ -1,5 +1,5 @@
 export const currentRelease = {
-  version: '4.3.2 Final',
+  version: '4.4.0 Final',
   status: { th: 'Final · เปิดดาวน์โหลด', en: 'Final · Download available' },
   target: 'XTEINK X3',
   highlights: [

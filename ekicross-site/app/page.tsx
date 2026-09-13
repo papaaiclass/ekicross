@@ -12,9 +12,9 @@ const firmwareDownloads = {
     sha256: '06cd360abe0ecbdfc6ef1578ac7d4d37b13676b6e247af9f1c0b412efabf79d0',
   },
   update: {
-    url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.3.2/firmware.bin',
+    url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.4.0/firmware.bin',
     size: '6.29 MB',
-    sha256: '068dfd8c1c623e85312ac69b04a0479f3e4ec4c740cce0aadfd9a1087a92bbeb',
+    sha256: 'bafc4ee46aeddda9cb4ecf52df012d02b31b692ae1b54373544172bf9ee1dfdd',
   },
 };
 
@@ -54,7 +54,7 @@ const copy = {
     developmentIntro: 'ความพิถีพิถันซ่อนอยู่ในรายละเอียดที่อาจไม่สะดุดตาในทันที แต่ผู้อ่านต้องมองเห็นและสัมผัสตลอดทั้งเล่ม จึงทดสอบตั้งแต่การตัดคำ การจัดย่อหน้า ตำแหน่งสระและวรรณยุกต์ ช่องไฟ เส้นขอบ ความสมมาตรของอินเทอร์เฟซ ปกหนังสือหลายรูปแบบ ไปจนถึงจังหวะการกดปุ่มซ้ำแล้วซ้ำอีกจนลงตัว',
     releaseLabel: 'รุ่นเฟิร์มแวร์',
     releaseTitle: 'รุ่นปัจจุบันและสถานะการเผยแพร่',
-    releaseBody: 'Ekicross มีให้เลือกสองรุ่นสำหรับ XTEINK X3 ได้แก่ 4.2.0 รุ่นสำรองหลักสำหรับผู้ที่ติดตั้ง Ekicross แล้วและต้องการย้อนกลับไปใช้ฐานที่มั่นคง และ 4.3.2 Final รุ่นล่าสุดที่ปรับความเข้ากันได้ของ EPUB ภาษาไทยให้การอ่านเป็นธรรมชาติยิ่งขึ้น',
+    releaseBody: 'Ekicross มีให้เลือกสองรุ่นสำหรับ XTEINK X3 ได้แก่ 4.2.0 รุ่นสำรองหลักสำหรับผู้ที่ติดตั้ง Ekicross แล้วและต้องการย้อนกลับไปใช้ฐานที่มั่นคง และ 4.4.0 Final รุ่นล่าสุดที่ปรับความเข้ากันได้ของ EPUB ภาษาไทยให้การอ่านเป็นธรรมชาติยิ่งขึ้น',
     target: 'รองรับเฉพาะ',
     download: 'ดาวน์โหลดเฟิร์มแวร์',
     fileSize: 'ไฟล์ .bin',
@@ -109,7 +109,7 @@ const copy = {
     developmentIntro: 'The care lives in details that may go unnoticed at first but remain visible throughout a book. English and Thai text, long titles, varied covers, and button flows are tested repeatedly until they settle naturally.',
     releaseLabel: 'FIRMWARE RELEASE',
     releaseTitle: 'Current release and availability',
-    releaseBody: 'Ekicross is available in two releases for the XTEINK X3: 4.2.0 as the primary fallback base for people who have installed Ekicross and need to return to a stable version, and the latest 4.3.2 Final with improved Thai EPUB compatibility for a more natural reading experience.',
+    releaseBody: 'Ekicross is available in two releases for the XTEINK X3: 4.2.0 as the primary fallback base for people who have installed Ekicross and need to return to a stable version, and the latest 4.4.0 Final with improved Thai EPUB compatibility for a more natural reading experience.',
     target: 'Target device',
     download: 'Download firmware',
     fileSize: '.bin file',
@@ -301,7 +301,7 @@ const installationCards = {
 
 const changelogEntries = [
   {
-    version: '4.3.2',
+    version: '4.4.0',
     state: 'current',
     status: { th: 'Final · เปิดดาวน์โหลด', en: 'Final · Download available' },
     headline: { th: 'ยกระดับความเข้ากันได้ของ EPUB ภาษาไทย', en: 'Improved Thai EPUB compatibility' },
