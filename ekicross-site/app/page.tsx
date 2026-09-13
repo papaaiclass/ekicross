@@ -12,9 +12,9 @@ const firmwareDownloads = {
     sha256: '06cd360abe0ecbdfc6ef1578ac7d4d37b13676b6e247af9f1c0b412efabf79d0',
   },
   update: {
-    url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.3.1/firmware.bin',
+    url: 'https://github.com/papaaiclass/ekicross/releases/download/v4.3.2/firmware.bin',
     size: '6.29 MB',
-    sha256: '833fd6e85035e39e7f02a07af74220666e374dc4d8610724f34f6856c9959b8e',
+    sha256: '068dfd8c1c623e85312ac69b04a0479f3e4ec4c740cce0aadfd9a1087a92bbeb',
   },
 };
 
@@ -54,7 +54,7 @@ const copy = {
     developmentIntro: 'ความพิถีพิถันซ่อนอยู่ในรายละเอียดที่อาจไม่สะดุดตาในทันที แต่ผู้อ่านต้องมองเห็นและสัมผัสตลอดทั้งเล่ม จึงทดสอบตั้งแต่การตัดคำ การจัดย่อหน้า ตำแหน่งสระและวรรณยุกต์ ช่องไฟ เส้นขอบ ความสมมาตรของอินเทอร์เฟซ ปกหนังสือหลายรูปแบบ ไปจนถึงจังหวะการกดปุ่มซ้ำแล้วซ้ำอีกจนลงตัว',
     releaseLabel: 'รุ่นเฟิร์มแวร์',
     releaseTitle: 'รุ่นปัจจุบันและสถานะการเผยแพร่',
-    releaseBody: 'Ekicross มีให้เลือกสองรุ่นสำหรับ XTEINK X3 ได้แก่ 4.2.0 รุ่นสำรองหลักสำหรับผู้ที่ติดตั้ง Ekicross แล้วและต้องการย้อนกลับไปใช้ฐานที่มั่นคง และ 4.3.1 Final รุ่นล่าสุดที่มาพร้อมธีม Ekihouse และการจัดหน้า Home ใหม่',
+    releaseBody: 'Ekicross มีให้เลือกสองรุ่นสำหรับ XTEINK X3 ได้แก่ 4.2.0 รุ่นสำรองหลักสำหรับผู้ที่ติดตั้ง Ekicross แล้วและต้องการย้อนกลับไปใช้ฐานที่มั่นคง และ 4.3.2 Final รุ่นล่าสุดที่ปรับความเข้ากันได้ของ EPUB ภาษาไทยให้การอ่านเป็นธรรมชาติยิ่งขึ้น',
     target: 'รองรับเฉพาะ',
     download: 'ดาวน์โหลดเฟิร์มแวร์',
     fileSize: 'ไฟล์ .bin',
@@ -109,7 +109,7 @@ const copy = {
     developmentIntro: 'The care lives in details that may go unnoticed at first but remain visible throughout a book. English and Thai text, long titles, varied covers, and button flows are tested repeatedly until they settle naturally.',
     releaseLabel: 'FIRMWARE RELEASE',
     releaseTitle: 'Current release and availability',
-    releaseBody: 'Ekicross is available in two releases for the XTEINK X3: 4.2.0 as the primary fallback base for people who have installed Ekicross and need to return to a stable version, and the latest 4.3.1 Final with the Ekihouse theme and a newly organized Home screen.',
+    releaseBody: 'Ekicross is available in two releases for the XTEINK X3: 4.2.0 as the primary fallback base for people who have installed Ekicross and need to return to a stable version, and the latest 4.3.2 Final with improved Thai EPUB compatibility for a more natural reading experience.',
     target: 'Target device',
     download: 'Download firmware',
     fileSize: '.bin file',
@@ -301,9 +301,37 @@ const installationCards = {
 
 const changelogEntries = [
   {
-    version: '4.3.1',
+    version: '4.3.2',
     state: 'current',
     status: { th: 'Final · เปิดดาวน์โหลด', en: 'Final · Download available' },
+    headline: { th: 'ยกระดับความเข้ากันได้ของ EPUB ภาษาไทย', en: 'Improved Thai EPUB compatibility' },
+    changes: [
+      {
+        th: 'เพิ่มระยะอ่านด้านล่างเหนือแถบสถานะ เพื่อให้บรรทัดสุดท้ายของหน้าไม่ดูติดกับส่วนควบคุม',
+        en: 'Added a protected reading margin above the status bar, so the final line stays visually clear of the controls.',
+      },
+      {
+        th: 'รักษากลุ่มพยัญชนะ สระ วรรณยุกต์ สระอำ และตัวสะกดไทยไว้ด้วยกันระหว่างการตัดบรรทัดและจัดเต็มบรรทัด',
+        en: 'Keeps Thai consonants, vowels, tone marks, sara am, and silent finals together during wrapping and justification.',
+      },
+      {
+        th: 'รองรับจุดตัดคำแบบไร้ช่องว่างใน EPUB โดยไม่แสดงอักขระแฝง ไม่เติมขีดกลาง และคงจุดตัดคำที่ผู้จัดพิมพ์กำหนดไว้',
+        en: 'Handles invisible EPUB break controls without showing hidden characters or adding hyphens, while preserving publisher-defined breaks.',
+      },
+      {
+        th: 'เพิ่มรายการคำไทยที่แก้ไขได้สำหรับชื่อเฉพาะ คำทับศัพท์ และวลีสำคัญ พร้อมคงการตัดคำของภาษาอื่นตามมาตรฐานเดิม',
+        en: 'Adds an editable Thai word list for names, transliterations, and fixed expressions while keeping established non-Thai hyphenation behavior.',
+      },
+      {
+        th: 'ตรวจ X3 production image, dual-OTA, checksum และ package integrity ครบ โดยไม่เขียน Bootloader หรือ Partition Table',
+        en: 'Verified the X3 production image, dual-OTA, checksum, and package integrity without writing the bootloader or partition table.',
+      },
+    ],
+  },
+  {
+    version: '4.3.1',
+    state: 'previous',
+    status: { th: 'รุ่นเผยแพร่ก่อนหน้า', en: 'Previous public release' },
     headline: { th: 'ธีมใหม่ Ekihouse และหน้า Home ที่เป็นธรรมชาติขึ้น', en: 'The new Ekihouse theme and a more natural Home screen' },
     changes: [
       {

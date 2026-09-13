@@ -1,17 +1,17 @@
 export const currentRelease = {
-  version: '4.3.1 Final',
+  version: '4.3.2 Final',
   status: { th: 'Final · เปิดดาวน์โหลด', en: 'Final · Download available' },
   target: 'XTEINK X3',
   highlights: [
-    { th: 'ธีมใหม่ Ekihouse พร้อมหน้า Home ที่เริ่มต้นอย่างเรียบและชัดเจน', en: 'The new Ekihouse theme with a calm, clear Home starting state' },
-    { th: 'ตำแหน่งเมนู ป้าย ไฮไลต์ และการควบคุมด้วยปุ่มจัดวางอย่างเป็นระบบ', en: 'Menu positions, highlights, and physical-button controls are organized consistently' },
-    { th: 'เพิ่มฟอนต์ Bai Jamjuree และ Mali ใน Extension Pack', en: 'Bai Jamjuree and Mali are now included in the Extension Pack' },
+    { th: 'ปรับความเข้ากันได้ของ EPUB ภาษาไทย ให้บรรทัดสุดท้ายมีระยะห่างจากแถบสถานะอย่างอ่านสบายตา', en: 'Improves Thai EPUB compatibility with a clear reading margin above the status bar' },
+    { th: 'รักษากลุ่มพยัญชนะ สระ และวรรณยุกต์ไทยไว้ด้วยกัน พร้อมปรับตำแหน่งวรรณยุกต์ซ้อนให้ชัดขึ้น', en: 'Keeps Thai consonants, vowels, and tone marks together, with clearer stacked-mark placement' },
+    { th: 'รองรับจุดตัดคำแบบไร้ช่องว่างใน EPUB โดยคงจังหวะการตัดคำภาษาไทยและภาษาอื่นตามต้นฉบับ', en: 'Handles invisible EPUB break controls while preserving natural Thai and non-Thai line wrapping' },
   ],
   tests: [
-    { value: '120/120', th: 'การทดสอบด้วย Python', en: 'Python tests' },
-    { value: '192/192', th: 'การทดสอบด้วย C++', en: 'C++ tests' },
-    { value: 'PASS', th: 'ตรวจ Firmware image, checksum และ OTA', en: 'Firmware image, checksum, and OTA validation' },
-    { value: 'PASS', th: 'Release bundle และ ZIP CRC', en: 'Release bundle and ZIP CRC' },
+    { value: '21/21', th: 'การตัดคำไทยและคลัสเตอร์อักขระ', en: 'Thai segmentation and cluster tests' },
+    { value: '23/23', th: 'รูปทรงและตำแหน่งวรรณยุกต์ไทย', en: 'Thai mark shaping and placement tests' },
+    { value: '9/9', th: 'การประเมินการตัดคำทุกภาษา', en: 'Hyphenation evaluation' },
+    { value: 'PASS', th: 'ตรวจ X3 image, checksum และ OTA', en: 'X3 image, checksum, and OTA validation' },
     { value: 'SAFE', th: 'ไม่เขียน Bootloader หรือ Partition Table', en: 'No bootloader or partition-table writes' },
   ],
 };
