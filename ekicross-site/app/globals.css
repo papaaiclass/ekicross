@@ -411,6 +411,7 @@ main[lang='th'] button {
 .changelog-card li { position: relative; padding: 11px 0 11px 24px; border-bottom: 1px solid rgba(94,105,133,.14); }
 .changelog-card li:last-child { border-bottom: 0; }
 .changelog-card li::before { content: ''; position: absolute; top: 20px; left: 3px; width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg,#7468f1,#d064a6); box-shadow: 0 0 0 5px rgba(136,103,219,.11); }
+.changelog-card li .changelog-group { display: block; margin-bottom: 4px; color: #2e3650; font-size: 14px; line-height: 1.5; }
 .changelog-card li p { margin: 0; color: #505b70; font-size: 15px; line-height: 1.62; }
 
 @media (max-width: 1000px) {
@@ -419,6 +420,8 @@ main[lang='th'] button {
 }
 @media (max-width: 850px) {
   .showcase-grid { grid-template-columns: 1fr; }
+  .showcase-device { width: min(100%, 440px); margin-inline: auto; display: grid; justify-items: center; }
+  .showcase-device figcaption { justify-self: stretch; }
   .showcase-grid figure:first-child, .showcase-grid figure:last-child { transform: none; }
   .two-releases { grid-template-columns: 1fr; }
   .support-card { grid-template-columns: 1fr; }
@@ -433,7 +436,7 @@ main[lang='th'] button {
 }
 @media (max-width: 520px) {
   .showcase, .installation, .changelog { padding: 58px 0; }
-  .showcase-device { width: min(121%, 473px); }
+  .showcase-device { width: min(100%, 440px); }
   .developer-profile { padding: 54px 0 68px; }
   .developer-copy h2 { font-size: 32px; }
   .showcase-grid figure { padding: 8px; border-radius: 23px; }

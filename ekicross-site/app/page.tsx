@@ -307,20 +307,51 @@ const changelogEntries = [
     headline: { th: 'ยกระดับความเข้ากันได้ของ EPUB ภาษาไทย', en: 'Improved Thai EPUB compatibility' },
     changes: [
       {
-        th: 'เพิ่มระยะอ่านด้านล่างเหนือแถบสถานะ เพื่อให้บรรทัดสุดท้ายของหน้าไม่ดูติดกับส่วนควบคุม',
-        en: 'Added a protected reading margin above the status bar, so the final line stays visually clear of the controls.',
+        title: { th: 'Improvements', en: 'Improvements' },
+        th: 'เพิ่มระยะห่างท้ายหน้าก่อนแถบสถานะ ลดปัญหาบรรทัดสุดท้ายชิดหรือชนขอบล่าง',
+        en: 'Adds bottom-page spacing before the status bar, preventing the last line from sitting against the lower edge.',
       },
       {
-        th: 'รักษากลุ่มพยัญชนะ สระ วรรณยุกต์ สระอำ และตัวสะกดไทยไว้ด้วยกันระหว่างการตัดบรรทัดและจัดเต็มบรรทัด',
-        en: 'Keeps Thai consonants, vowels, tone marks, sara am, and silent finals together during wrapping and justification.',
+        th: 'ปรับการวางสระและวรรณยุกต์ไทย ให้พยัญชนะ สระ วรรณยุกต์ การันต์ และสระอำอยู่ในกลุ่มเดียวกันระหว่างการตัดบรรทัดและจัดเต็มบรรทัด',
+        en: 'Refines Thai vowel and tone-mark placement, keeping consonants, vowels, tone marks, thanthakhat, and sara am together during wrapping and justification.',
       },
       {
-        th: 'รองรับจุดตัดคำแบบไร้ช่องว่างใน EPUB โดยไม่แสดงอักขระแฝง ไม่เติมขีดกลาง และคงจุดตัดคำที่ผู้จัดพิมพ์กำหนดไว้',
-        en: 'Handles invisible EPUB break controls without showing hidden characters or adding hyphens, while preserving publisher-defined breaks.',
+        th: 'ปรับระบบตัดคำไทยด้วยพจนานุกรมขนาดเล็กใน Flash ร่วมกับกฎขอบเขตอักขระ โดยไม่เพิ่ม AI model หรือภาระ RAM',
+        en: 'Refines Thai word breaking with a compact Flash-resident dictionary and character-boundary rules, without adding an AI model or RAM overhead.',
       },
       {
-        th: 'เพิ่มรายการคำไทยที่แก้ไขได้สำหรับชื่อเฉพาะ คำทับศัพท์ และวลีสำคัญ พร้อมคงการตัดคำของภาษาอื่นตามมาตรฐานเดิม',
-        en: 'Adds an editable Thai word list for names, transliterations, and fixed expressions while keeping established non-Thai hyphenation behavior.',
+        th: 'เพิ่ม Custom Word List สำหรับชื่อเฉพาะ คำทับศัพท์ และวลีที่พจนานุกรมทั่วไปไม่รู้จัก',
+        en: 'Adds a Custom Word List for names, transliterations, and phrases that general dictionaries do not recognise.',
+      },
+      {
+        title: { th: 'EPUB Line Breaking', en: 'EPUB Line Breaking' },
+        th: 'รองรับ ZWSP เป็นจุดตัดบรรทัดแบบไม่มีช่องว่าง',
+        en: 'Supports ZWSP as a zero-width line-break opportunity.',
+      },
+      {
+        th: 'ป้องกัน ZWSP ที่แทรกกลางกลุ่มอักษรไทยหรือกลางคำที่รู้จักไม่ให้ทำให้คำแตก',
+        en: 'Prevents ZWSP inside a Thai character cluster or a recognised word from splitting the word.',
+      },
+      {
+        th: 'รองรับ Word Joiner, NBSP, NNBSP และ FEFF ตามมาตรฐานการห้ามตัดบรรทัด',
+        en: 'Supports Word Joiner, NBSP, NNBSP, and FEFF according to no-break line-breaking rules.',
+      },
+      {
+        th: 'ไม่สร้าง hyphen เพิ่ม และคง hyphen ที่มีอยู่ในต้นฉบับ',
+        en: 'Does not insert additional hyphens and preserves hyphens already present in the source.',
+      },
+      {
+        title: { th: 'Pagination & Compatibility', en: 'Pagination & Compatibility' },
+        th: 'รักษาตำแหน่งเนื้อหาและ Reading Progress แม้มี invisible control characters',
+        en: 'Preserves content position and Reading Progress even when invisible control characters are present.',
+      },
+      {
+        th: 'บังคับ rebuild EPUB pagination cache เมื่อกฎการจัดหน้าเปลี่ยน',
+        en: 'Forces an EPUB pagination-cache rebuild whenever layout rules change.',
+      },
+      {
+        th: 'ปรับกฎโดยอ้างอิง Unicode Line Breaking, Thai Layout Requirements, งานวิจัย Thai word segmentation และ UD Thai โดยไม่เพิ่ม parser ภาษาขนาดใหญ่บนเครื่อง',
+        en: 'Refines the rules using Unicode Line Breaking, Thai Layout Requirements, Thai word-segmentation research, and UD Thai without adding a large on-device language parser.',
       },
     ],
   },
@@ -645,7 +676,10 @@ export default function Home() {
         <div className="changelog-list">
           {changelogEntries.map(entry => <article className={`changelog-card changelog-${entry.state} glass`} key={entry.version}>
             <div className="changelog-version"><span>VERSION</span><strong>{entry.version}</strong><small>{entry.status[lang]}</small><h3>{entry.headline[lang]}</h3></div>
-            <ul>{entry.changes.map(change => <li key={change.th}><p>{change[lang]}</p></li>)}</ul>
+            <ul>{entry.changes.map(change => {
+              const category = change.title?.[lang];
+              return <li key={change.th}>{category && <strong className="changelog-group">{category}</strong>}<p>{change[lang]}</p></li>;
+            })}</ul>
           </article>)}
         </div>
       </section>
