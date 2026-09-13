@@ -322,10 +322,6 @@ const changelogEntries = [
         th: 'เพิ่มรายการคำไทยที่แก้ไขได้สำหรับชื่อเฉพาะ คำทับศัพท์ และวลีสำคัญ พร้อมคงการตัดคำของภาษาอื่นตามมาตรฐานเดิม',
         en: 'Adds an editable Thai word list for names, transliterations, and fixed expressions while keeping established non-Thai hyphenation behavior.',
       },
-      {
-        th: 'ตรวจ X3 production image, dual-OTA, checksum และ package integrity ครบ โดยไม่เขียน Bootloader หรือ Partition Table',
-        en: 'Verified the X3 production image, dual-OTA, checksum, and package integrity without writing the bootloader or partition table.',
-      },
     ],
   },
   {
