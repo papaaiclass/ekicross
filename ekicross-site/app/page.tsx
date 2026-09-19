@@ -633,7 +633,7 @@ export default function Home() {
           </div>
           <div className="support-qr">
             <div className="support-qr-visual">
-              <img src={assetPath('/promptpay-qr.png')} alt={lang === 'th' ? 'QR Code สำหรับสนับสนุนผู้พัฒนาผ่าน PromptPay' : 'PromptPay QR code to support the developer'} />
+              <img src={assetPath('/promptpay-qr-20260920.png')} alt={lang === 'th' ? 'QR Code สำหรับสนับสนุนผู้พัฒนาผ่าน PromptPay' : 'PromptPay QR code to support the developer'} />
             </div>
             <strong>{t.supportPromptpay}</strong>
           </div>
