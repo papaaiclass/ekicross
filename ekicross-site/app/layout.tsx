@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     description: 'เฟิร์มแวร์ X3 ที่ใส่ใจภาษาไทย ตั้งแต่เมนู การตัดคำ ไปจนถึงความปลอดภัยของการอัปเดต',
     images: ['https://ekicross-x3-launching.eksivat-works.chatgpt.site/og.png'],
   },
+  other: {
+    'impact-site-verification': '74009389-6344-46d2-b6fd-2551e95fcfa3',
+  },
 };
 
 export default function RootLayout({
