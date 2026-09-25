@@ -26,6 +26,8 @@ const extensionPack = {
   folders: ['dictionaries', 'Notes', 'screenshots', 'sleep', 'books', 'fonts', 'Articles', 'Gallery'],
 };
 
+const xteinkPartnerUrl = 'https://go.sjv.io/c/7830173/3930529/54011';
+
 const assetPath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}`;
 
 const copy = {
@@ -63,6 +65,11 @@ const copy = {
     installReadyFile: 'ไฟล์นี้ใช้ชื่อ firmware.bin และพร้อมวางลงในพื้นที่หลักของ SD Card',
     warningTitle: 'ก่อนติดตั้ง',
     warning: 'เฟิร์มแวร์นี้รองรับเฉพาะ XTEINK X3 และการอัปเดตผ่าน SD Card เท่านั้น ไม่ใช่ X4 และไม่ใช่ไฟล์ Full-flash ก่อนอัปเดตควรสำรองข้อมูล ชาร์จแบตเตอรี่ให้เพียงพอ ตรวจ SHA-256 และห้ามปิดเครื่องหรือถอด SD Card ระหว่างติดตั้ง',
+    partnerLabel: 'OFFICIAL STORE PARTNER',
+    partnerTitle: 'สนใจ XTEINK X3? ซื้อผ่านลิงก์พันธมิตรของ Ekicross',
+    partnerBody: 'ลิงก์นี้พาไปยังเว็บไซต์ทางการของ XTEINK โดยตรง หากการซื้อเข้าเงื่อนไข โปรแกรมพันธมิตรอาจมอบค่าคอมมิชชันเพื่อช่วยสนับสนุนการพัฒนา Ekicross โดยไม่มีขั้นตอนเพิ่มสำหรับคุณ',
+    partnerAction: 'ไปยังเว็บไซต์ XTEINK',
+    partnerNote: 'ลิงก์พันธมิตร · เปิดเว็บไซต์ XTEINK ในแท็บใหม่',
     supportLabel: 'สนับสนุนผู้พัฒนา',
     supportTitle: 'ช่วยให้ Ekicross พัฒนาต่อได้',
     supportBody1: 'เฟิร์มแวร์นี้พัฒนาขึ้นด้วยความตั้งใจให้ทุกคนได้ใช้งานฟรี ไม่มีค่าใช้จ่าย',
@@ -119,6 +126,11 @@ const copy = {
     installReadyFile: 'This file is already named firmware.bin and is ready for the root of the SD card',
     warningTitle: 'Before installing',
     warning: 'This firmware supports only the XTEINK X3 and SD card updates. It is not for X4 and is not a full-flash image. Back up important data, charge the battery, verify SHA-256, and never power off or remove the SD card during installation.',
+    partnerLabel: 'OFFICIAL STORE PARTNER',
+    partnerTitle: 'Considering an XTEINK X3? Buy through Ekicross',
+    partnerBody: 'This link takes you directly to the official XTEINK website. Eligible purchases may provide an affiliate commission that helps support Ekicross development, with no extra steps for you.',
+    partnerAction: 'Visit XTEINK',
+    partnerNote: 'Affiliate link · Opens the XTEINK website in a new tab',
     supportLabel: 'SUPPORT THE DEVELOPER',
     supportTitle: 'Help Ekicross keep improving',
     supportBody1: 'This firmware is made with care and shared freely for everyone to use at no cost.',
@@ -555,6 +567,18 @@ export default function Home() {
         <nav aria-label={lang === 'th' ? 'เมนูหลัก' : 'Main navigation'}>{t.nav.map((item, index) => <a key={item} href={['#story', '#development', '#release', '#install', '#changelog'][index]}>{item}</a>)}</nav>
         <div className="language" aria-label="Language"><button className={lang === 'th' ? 'active' : ''} onClick={() => setLang('th')}>TH</button><button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')}>EN</button></div>
       </header>
+
+      <aside className="partner-banner wrap glass" aria-labelledby="partner-title">
+        <div className="partner-banner-copy">
+          <span className="partner-label"><span className="partner-star" aria-hidden="true">✦</span>{t.partnerLabel}</span>
+          <h3 id="partner-title">{t.partnerTitle}</h3>
+          <p>{t.partnerBody}</p>
+        </div>
+        <div className="partner-banner-action">
+          <a className="partner-button" href={xteinkPartnerUrl} target="_blank" rel="sponsored noopener noreferrer">{t.partnerAction}<span aria-hidden="true">↗</span></a>
+          <small>{t.partnerNote}</small>
+        </div>
+      </aside>
 
       <section className="hero wrap" id="top">
         <div className="hero-copy">
