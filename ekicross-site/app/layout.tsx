@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Noto_Sans_Thai } from 'next/font/google';
 import './globals.css';
 
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const primarySiteUrl = 'https://ekicross.pages.dev/';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -46,6 +49,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="th">
+      {isGitHubPages && (
+        <head>
+          <meta httpEquiv="refresh" content={`0; url=${primarySiteUrl}`} />
+          <link rel="canonical" href={primarySiteUrl} />
+          <meta name="robots" content="noindex,follow" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.location.replace(${JSON.stringify(primarySiteUrl)});`,
+            }}
+          />
+        </head>
+      )}
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${notoSansThai.variable} antialiased`}
       >
